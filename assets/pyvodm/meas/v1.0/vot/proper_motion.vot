@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="ICRSFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PM">
+        <DESCRIPTION>Proper Motion</DESCRIPTION>
+        <GROUP name="PM_COORD">
+          <DESCRIPTION>Proper Motion Coordinate</DESCRIPTION>
+          <PARAM name="lon" datatype="double" value="-356.01" unit="mas/yr"/>
+          <PARAM name="lat" datatype="double" value="1742.47" unit="mas/yr"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

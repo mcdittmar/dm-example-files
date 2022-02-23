@@ -1,0 +1,32 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_10AukhaQ4oycPJ6' name='TimeSys' vodml_role='coords:TimeSys' vodml_type='coords:TimeSys'>
+      <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_01pUyYglbbBI8Ap' name='TimeFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:TimeFrame'>
+          <DESCRIPTION>Time frame metadata</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:TimeFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01Qguhm2dTtgVAD' name='tscale' vodml_role='coords:TimeFrame.timescale' vodml_type='ivoa:string' value='TT'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02CUuREdx3t7Yd9' name='MJDRef' vodml_role='coords:MJD' vodml_type='coords:MJD'>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_02zZDzKxTfVie1t' name='date' vodml_role='coords:MJD.date' vodml_type='ivoa:real' value='50814.02'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02YM8pcCRxN9dhE' name='timesys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:TimeSys' target='_10AukhaQ4oycPJ6'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

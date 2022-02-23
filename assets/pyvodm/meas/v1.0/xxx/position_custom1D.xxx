@@ -1,0 +1,67 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_08Cg2XN38Dysnaa' name='CoordSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <DESCRIPTION>Custom 1D Coordinate Space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_08KFWMKFbPI7Jwq' name='MSC_R_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>MSC Radial axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_08vPNGtbvEndRBc' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='r'/>
+                <DATATYPE ID='_08Hv0GOgPQv1xNf' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='10.0' unit='m'/>
+                <DATATYPE ID='_082teH64rw79ozd' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='+Inf' unit='m'/>
+                <PRIMITIVE ID='_080jSRarBDZFC78' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='SpaceFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='CUSTOM'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_11nIhrfPXMzKINZ' name='DIST' vodml_role='meas:Position' vodml_type='meas:Position'>
+      <DESCRIPTION>Position (1D)</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_0570jr7ImKTh9rP' name='DIST_Coord' vodml_role='meas:Position.coord' vodml_type='coords:GenericPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_05g5gBm4lh71UnL' name='z' vodml_role='coords:GenericPoint.axis1' vodml_type='ivoa:RealQuantity' value='750857306.2' unit='km'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_05irWNEIWnx7SZ2' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12B2v5BbMNRXlLV' name='DIST_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_1321R6CwnGQXhZ3' name='DIST_SYS_ERROR' vodml_role='meas:Error.sysError' vodml_type='meas:Asymmetrical1D'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13oue29vm5B0INF' name='plus' vodml_role='meas:Asymmetrical1D.plus' vodml_type='ivoa:RealQuantity' value='10000.0' unit='km'>
+                  <DESCRIPTION>MSC Radial Error: positive axis direction</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13zLx4wknmZD9OH' name='minus' vodml_role='meas:Asymmetrical1D.minus' vodml_type='ivoa:RealQuantity' value='100.0' unit='km'>
+                  <DESCRIPTION>MSC Radial Error: negative axis direction</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

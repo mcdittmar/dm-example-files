@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_10AukhaQ4oycPJ6" name="TimeSys">
+        <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+        <GROUP name="TimeFrame">
+          <DESCRIPTION>Time frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="tscale" datatype="char" arraysize="2" value="TT"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="MJDRef">
+        <PARAM name="date" datatype="double" value="50814.02"/>
+        <GROUP name="timesys" ref="_10AukhaQ4oycPJ6"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

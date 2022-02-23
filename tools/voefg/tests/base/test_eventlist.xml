@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01dasjgawtgfvis">
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>ICRS</spaceRefFrame>
+    </frame>
+  </coords:SpaceSys>
+  <meas:Position>
+    <coord xsi:type="coords:LonLatPoint">
+      <coordSys IDREF="_01dasjgawtgfvis"/>
+      <lon xsi:type="ivoa:RealQuantity">
+        <unit>deg</unit>
+        <value>278.38604502313</value>
+      </lon>
+      <lat xsi:type="ivoa:RealQuantity">
+        <unit>deg</unit>
+        <value>-10.589913302866</value>
+      </lat>
+    </coord>
+  </meas:Position>
+  <coords:PixelSpace>
+    <axis xsi:type="coords:BinnedAxis">
+      <length>10</length>
+    </axis>
+    <axis xsi:type="coords:BinnedAxis">
+      <length>20</length>
+    </axis>
+    <handedness>right</handedness>
+  </coords:PixelSpace>
+</meas:EXAMPLE>

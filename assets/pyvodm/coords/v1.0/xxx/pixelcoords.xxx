@@ -1,0 +1,78 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_9UjJocEEjPPVk9O' name='PixelCoordSys' vodml_role='coords:PixelCoordSystem' vodml_type='coords:PixelCoordSystem'>
+      <COMPOSITIONS>
+        <OBJECT ID='_8ogCGHlGq16TtF8' name='Image' vodml_role='coords:PixelCoordSystem.pixelSpace' vodml_type='coords:PixelSpace'>
+          <ATTRIBUTES>
+            <ENUMERATION ID='_8f9w86qJHdL6cmr' name='handedness' vodml_role='coords:PixelSpace.handedness' vodml_type='coords:Handedness' value='right'>
+              <LITERAL vodmlid='coords:Handedness.left' label='left' />
+              <LITERAL vodmlid='coords:Handedness.right' label='right' />
+            </ENUMERATION>
+          </ATTRIBUTES>
+          <COMPOSITIONS>
+            <OBJECT ID='_89yCr0yhuHItZvP' name='Axis1' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8lUEVX8fT9OUIuj' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='#1'/>
+                <PRIMITIVE ID='_8LKha1dP69sVXq5' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='512'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8Pt65JnFOnv94y0' name='Axis2' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_866uSWrhoVj5dlr' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='#2'/>
+                <PRIMITIVE ID='_8n7HzNA8VPs6HHF' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='512'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8NyFKyIJgmDZVyA' name='Axis3' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8Kzy3LSq7BcuWN1' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='#3'/>
+                <PRIMITIVE ID='_86dHhOiR1oirz1t' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='26'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8R4VBrLWm7tlzhS' name='Axis4' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8YWyKqtREpsW4ku' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='#4'/>
+                <PRIMITIVE ID='_8VITZ9t4PyH8ZzW' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='1'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02ykO7lRHRImXDq' name='PixCoord1' vodml_role='coords:PixelIndex' vodml_type='coords:PixelIndex'>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_02f7KqqULLfaBE7' name='cval' vodml_role='coords:BinnedCoordinate.cval' vodml_type='ivoa:integer' value='100'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02cchofZyKG27fl' name='coordSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:PixelCoordSystem' target='_9UjJocEEjPPVk9O'/>
+      </REFERENCES>
+    </DATATYPE>
+    <DATATYPE ID='_02hajhCpZqHiIqq' name='PixCoord2' vodml_role='coords:PixelIndex' vodml_type='coords:PixelIndex'>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_02r5cM7lUhkJ19F' name='cval' vodml_role='coords:BinnedCoordinate.cval' vodml_type='ivoa:integer' value='75'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02TXa2z5p9lWDW4' name='coordSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:PixelCoordSystem' target='_9UjJocEEjPPVk9O'/>
+      </REFERENCES>
+    </DATATYPE>
+    <DATATYPE ID='_021bTwaF88tAR2k' name='PixCoord3' vodml_role='coords:PixelIndex' vodml_type='coords:PixelIndex'>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_02Vjc9DKu9jPowg' name='cval' vodml_role='coords:BinnedCoordinate.cval' vodml_type='ivoa:integer' value='12'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02c9IyMGnOJ9VOw' name='coordSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:PixelCoordSystem' target='_9UjJocEEjPPVk9O'/>
+      </REFERENCES>
+    </DATATYPE>
+    <DATATYPE ID='_02hc1aOYQmVPyIg' name='PixCoord4' vodml_role='coords:PixelIndex' vodml_type='coords:PixelIndex'>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_0290VVjiXaWmduu' name='cval' vodml_role='coords:BinnedCoordinate.cval' vodml_type='ivoa:integer' value='0'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02krqWXhOsZzXpB' name='coordSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:PixelCoordSystem' target='_9UjJocEEjPPVk9O'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

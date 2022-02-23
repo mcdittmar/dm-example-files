@@ -1,0 +1,66 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_8lxlG0Yiaxfalar' name='CartesianSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:CartesianCoordSpace'>
+          <DESCRIPTION>Custom cartesian coordinate space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_8vA3YZBKENfVcxY' name='X_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>x axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8zY8o9RzwgAGqSe' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='x'/>
+                <DATATYPE ID='_8q3yKYZsCGEsTX3' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='-1.5' unit='m'/>
+                <DATATYPE ID='_8dxOvWZO8Pq3fK5' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='1.5' unit='m'/>
+                <PRIMITIVE ID='_8BB30N3uUFlkLs0' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8de3ZyCxXfWWcxJ' name='Y_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>y axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8EswWcL3gAAdGtv' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='y'/>
+                <DATATYPE ID='_8LDjzFDKfhCR3On' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='-1.5' unit='m'/>
+                <DATATYPE ID='_8NXdIpPM18G3Zxl' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='1.5' unit='m'/>
+                <PRIMITIVE ID='_8Bg9YvFjvuoNxIq' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8lVLDmNfwgzUQGQ' name='Z_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>z axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8o30AB5xvOtLVim' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='z'/>
+                <DATATYPE ID='_8JUpdGad7e9G7ep' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='m'/>
+                <DATATYPE ID='_8eCAcmtJNrX8fdi' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='1000.0' unit='m'/>
+                <PRIMITIVE ID='_8w2E5q40nKqACPV' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='SpaceFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='CUSTOM'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02DrY9yBi2oDbK3' name='Point' vodml_role='coords:CartesianPoint' vodml_type='coords:CartesianPoint'>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02L7QMpFlxbOWYk' name='x' vodml_role='coords:CartesianPoint.x' vodml_type='ivoa:RealQuantity' value='0.0' unit='m'/>
+        <DATATYPE ID='_02IrvRAzLhB4xUs' name='y' vodml_role='coords:CartesianPoint.y' vodml_type='ivoa:RealQuantity' value='0.0' unit='m'/>
+        <DATATYPE ID='_02cFTUUflZiA1ez' name='z' vodml_role='coords:CartesianPoint.z' vodml_type='ivoa:RealQuantity' value='534.7' unit='m'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02XAaKP4r2y7714' name='spacesys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

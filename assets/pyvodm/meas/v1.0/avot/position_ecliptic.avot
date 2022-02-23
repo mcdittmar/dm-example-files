@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01jzLvzMtXNiujK" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:Position">
+        <ATTRIBUTE dmrole="meas:Position.coord">
+          <INSTANCE dmtype="coords:LonLatPoint">
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lon">
+              <CONSTANT ref="_02RJlHbo8AilyXF" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lat">
+              <CONSTANT ref="_02LtrbYyzwSFoT1" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+        <COMPOSITION dmrole="meas:Measure.error"> 
+          <INSTANCE dmtype="meas:Error">
+            <ATTRIBUTE dmrole="meas:Error.sysError">
+              <INSTANCE dmtype="meas:Symmetrical">
+                <ATTRIBUTE dmrole="meas:Symmetrical.radius">
+                  <CONSTANT ref="_13DCrDczxTFIHVx" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="EclipticFrame">
+          <DESCRIPTION>Ecliptic Space frame</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01jzLvzMtXNiujK" name="refFrame" datatype="char" arraysize="8" value="ECLIPTIC"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="ECLPOS">
+        <DESCRIPTION>Ecliptic position</DESCRIPTION>
+        <GROUP name="ECLPOS_Coord">
+          <PARAM ID="_02RJlHbo8AilyXF" name="elon" datatype="double" value="303.71570166" unit="deg"/>
+          <PARAM ID="_02LtrbYyzwSFoT1" name="elat" datatype="double" value="-10.3713407" unit="deg"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="ECLPOS_Error">
+          <GROUP name="ECLPOS_SYS_ERROR">
+            <PARAM ID="_13DCrDczxTFIHVx" name="radius" datatype="double" value="2.7400E-04" unit="deg">
+              <DESCRIPTION>Position error - radius</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

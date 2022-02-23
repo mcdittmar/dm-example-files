@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_9UjJocEEjPPVk9O2" dmtype="coords:PixelCoordSystem">
+        <COMPOSITION dmrole="coords:PixelCoordSystem.pixelSpace"> 
+          <INSTANCE dmtype="coords:PixelSpace">
+            <ATTRIBUTE dmrole="coords:PixelSpace.handedness">
+              <CONSTANT ref="_8f9w86qJHdL6cmr" dmtype="coords:Handedness"/>
+            </ATTRIBUTE>
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:BinnedAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8lUEVX8fT9OUIuj" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+                  <CONSTANT ref="_8LKha1dP69sVXq5" dmtype="ivoa:nonnegativeInteger"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:BinnedAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_866uSWrhoVj5dlr" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+                  <CONSTANT ref="_8n7HzNA8VPs6HHF" dmtype="ivoa:nonnegativeInteger"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:BinnedAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8Kzy3LSq7BcuWN1" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+                  <CONSTANT ref="_86dHhOiR1oirz1t" dmtype="ivoa:nonnegativeInteger"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:BinnedAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8YWyKqtREpsW4ku" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+                  <CONSTANT ref="_8VITZ9t4PyH8ZzW" dmtype="ivoa:nonnegativeInteger"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PixelIndex">
+        <ATTRIBUTE dmrole="coords:BinnedCoordinate.cval">
+          <CONSTANT ref="_02f7KqqULLfaBE7" dmtype="ivoa:integer"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9UjJocEEjPPVk9O2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PixelIndex">
+        <ATTRIBUTE dmrole="coords:BinnedCoordinate.cval">
+          <CONSTANT ref="_02r5cM7lUhkJ19F" dmtype="ivoa:integer"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9UjJocEEjPPVk9O2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PixelIndex">
+        <ATTRIBUTE dmrole="coords:BinnedCoordinate.cval">
+          <CONSTANT ref="_02Vjc9DKu9jPowg" dmtype="ivoa:integer"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9UjJocEEjPPVk9O2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PixelIndex">
+        <ATTRIBUTE dmrole="coords:BinnedCoordinate.cval">
+          <CONSTANT ref="_0290VVjiXaWmduu" dmtype="ivoa:integer"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9UjJocEEjPPVk9O2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_9UjJocEEjPPVk9O" name="PixelCoordSys">
+        <GROUP name="Image">
+          <PARAM ID="_8f9w86qJHdL6cmr" name="handedness" datatype="char" arraysize="5" value="right"/>
+          <GROUP name="Axis1">
+            <PARAM ID="_8lUEVX8fT9OUIuj" name="name" datatype="char" arraysize="2" value="#1"/>
+            <PARAM ID="_8LKha1dP69sVXq5" name="length" datatype="long" value="512"/>
+          </GROUP>
+          <GROUP name="Axis2">
+            <PARAM ID="_866uSWrhoVj5dlr" name="name" datatype="char" arraysize="2" value="#2"/>
+            <PARAM ID="_8n7HzNA8VPs6HHF" name="length" datatype="long" value="512"/>
+          </GROUP>
+          <GROUP name="Axis3">
+            <PARAM ID="_8Kzy3LSq7BcuWN1" name="name" datatype="char" arraysize="2" value="#3"/>
+            <PARAM ID="_86dHhOiR1oirz1t" name="length" datatype="long" value="26"/>
+          </GROUP>
+          <GROUP name="Axis4">
+            <PARAM ID="_8YWyKqtREpsW4ku" name="name" datatype="char" arraysize="2" value="#4"/>
+            <PARAM ID="_8VITZ9t4PyH8ZzW" name="length" datatype="long" value="1"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PixCoord1">
+        <PARAM ID="_02f7KqqULLfaBE7" name="cval" datatype="int" value="100"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord2">
+        <PARAM ID="_02r5cM7lUhkJ19F" name="cval" datatype="int" value="75"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord3">
+        <PARAM ID="_02Vjc9DKu9jPowg" name="cval" datatype="int" value="12"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord4">
+        <PARAM ID="_0290VVjiXaWmduu" name="cval" datatype="int" value="0"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

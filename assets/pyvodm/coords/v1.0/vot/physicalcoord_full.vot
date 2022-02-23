@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <GROUP name="Energy_Axis">
+            <PARAM name="name" datatype="char" arraysize="6" value="energy"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="eV"/>
+            <PARAM name="tlmax" datatype="double" value="1000000.0" unit="eV"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Energy">
+        <PARAM name="cval" datatype="double" value="13950.9433593750" unit="eV"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

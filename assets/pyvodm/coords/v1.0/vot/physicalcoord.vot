@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+      </GROUP>
+      <GROUP name="PhysicalCoord">
+        <PARAM name="UMAG" datatype="double" value="-0.28" unit="mag"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

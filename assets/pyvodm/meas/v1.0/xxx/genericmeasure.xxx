@@ -1,0 +1,55 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01qjaTuuZJmUZTd' name='MagSys' vodml_role='coords:GenericSys' vodml_type='coords:GenericSys'>
+      <DESCRIPTION>Magnitude domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_84tP8eGaTcRF2Gu' name='MagSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <DESCRIPTION>Magnitude coordinate space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_8y9XMvAkje6ylJq' name='MagX_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>Mag axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_851omWRNp9EpEOp' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='mag'/>
+                <DATATYPE ID='_8D1YHaRXQC6pjzI' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='-30' unit='mag'/>
+                <DATATYPE ID='_8tmIkebwkYQ7ynP' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='30' unit='mag'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_11BhLVAISxWQHqk' name='Magnitude' vodml_role='meas:GenericMeasure' vodml_type='meas:GenericMeasure'>
+      <DESCRIPTION>Magnitude measure</DESCRIPTION>
+      <ATTRIBUTES>
+        <PRIMITIVE ID='_11C4f9alaalj4gz' name='ucd' vodml_role='meas:Measure.ucd' vodml_type='ivoa:string' value='phot.mag'/>
+        <DATATYPE ID='_05RM12nDiH4UUYG' name='Mag_Coord' vodml_role='meas:GenericMeasure.coord' vodml_type='coords:PhysicalCoordinate'>
+          <DESCRIPTION>Generic physical coordinate</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_05ddijpxt8hHcj7' name='umag' vodml_role='coords:PhysicalCoordinate.cval' vodml_type='ivoa:RealQuantity' value='-0.28'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_05GtcFE7657G3MA' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:GenericSys' target='_01qjaTuuZJmUZTd'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12RupbeCAlPBVtT' name='Mag_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_13gPgnlEyrRri6V' name='MagStatError' vodml_role='meas:Error.statError' vodml_type='meas:Symmetrical'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13fKRwnCDUjToiS' name='radius' vodml_role='meas:Symmetrical.radius' vodml_type='ivoa:RealQuantity' value='0.001' unit='mag'>
+                  <DESCRIPTION>Magnitude error radius</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

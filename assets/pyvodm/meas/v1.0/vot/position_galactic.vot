@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="GalacticFrame">
+          <DESCRIPTION>Galactic Space frame</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="8" value="GALACTIC"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="GALPOS">
+        <DESCRIPTION>Galactic position</DESCRIPTION>
+        <GROUP name="GALPOS_Coord">
+          <PARAM name="l" datatype="double" value="303.71570166" unit="deg">
+            <DESCRIPTION>Galactic Longitude</DESCRIPTION>
+          </PARAM>
+          <PARAM name="b" datatype="double" value="-10.3713407" unit="deg">
+            <DESCRIPTION>Galactic Latitude</DESCRIPTION>
+          </PARAM>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="GALPOS_Error">
+          <GROUP name="GALPOS_SYS_ERROR">
+            <PARAM name="radius" datatype="double" value="2.7400E-04" unit="deg">
+              <DESCRIPTION>Position error - radius</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

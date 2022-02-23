@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:PixelCoordSystem ID="_9UjJocEEjPPVk9O">
+    <pixelSpace xsi:type="coords:PixelSpace">
+      <axis xsi:type="coords:BinnedAxis">
+        <name>#1</name>
+        <length>512</length>
+      </axis>
+      <axis xsi:type="coords:BinnedAxis">
+        <name>#2</name>
+        <length>512</length>
+      </axis>
+      <axis xsi:type="coords:BinnedAxis">
+        <name>#3</name>
+        <length>26</length>
+      </axis>
+      <axis xsi:type="coords:BinnedAxis">
+        <name>#4</name>
+        <length>1</length>
+      </axis>
+      <handedness>right</handedness>
+    </pixelSpace>
+  </coords:PixelCoordSystem>
+  <coords:PixelIndex>
+    <coordSys IDREF="_9UjJocEEjPPVk9O"/>
+    <cval>100</cval>
+  </coords:PixelIndex>
+  <coords:PixelIndex>
+    <coordSys IDREF="_9UjJocEEjPPVk9O"/>
+    <cval>75</cval>
+  </coords:PixelIndex>
+  <coords:PixelIndex>
+    <coordSys IDREF="_9UjJocEEjPPVk9O"/>
+    <cval>12</cval>
+  </coords:PixelIndex>
+  <coords:PixelIndex>
+    <coordSys IDREF="_9UjJocEEjPPVk9O"/>
+    <cval>0</cval>
+  </coords:PixelIndex>
+</coords:EXAMPLE>

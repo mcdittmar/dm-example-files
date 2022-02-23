@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:TimeSys ID="_10AukhaQ4oycPJ6">
+    <frame xsi:type="coords:TimeFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <timescale>TT</timescale>
+    </frame>
+  </coords:TimeSys>
+  <meas:Time>
+    <error xsi:type="meas:Error">
+      <sysError xsi:type="meas:Symmetrical">
+        <radius xsi:type="ivoa:RealQuantity">
+          <unit>s</unit>
+          <value>3.241040</value>
+        </radius>
+      </sysError>
+    </error>
+    <coord xsi:type="coords:TimeOffset">
+      <coordSys IDREF="_10AukhaQ4oycPJ6"/>
+      <time xsi:type="ivoa:RealQuantity">
+        <unit>s</unit>
+        <value>84245787.5272969157</value>
+      </time>
+      <time0 xsi:type="coords:MJD">
+        <coordSys IDREF="_10AukhaQ4oycPJ6"/>
+        <date>50814.02</date>
+      </time0>
+    </coord>
+  </meas:Time>
+</meas:EXAMPLE>

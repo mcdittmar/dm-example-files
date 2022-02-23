@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:TimeSys ID="_10AukhaQ4oycPJ6">
+    <frame xsi:type="coords:TimeFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <timescale>TT</timescale>
+    </frame>
+  </coords:TimeSys>
+  <coords:ISOTime>
+    <coordSys IDREF="_10AukhaQ4oycPJ6"/>
+    <date>2000-09-02T01:10:14</date>
+  </coords:ISOTime>
+</coords:EXAMPLE>

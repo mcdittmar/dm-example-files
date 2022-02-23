@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CartesianSpace">
+          <DESCRIPTION>Custom cartesian coordinate space</DESCRIPTION>
+          <GROUP name="X_Axis">
+            <DESCRIPTION>x axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="1" value="x"/>
+            <PARAM name="tlmin" datatype="double" value="-1.5" unit="m"/>
+            <PARAM name="tlmax" datatype="double" value="1.5" unit="m"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="Y_Axis">
+            <DESCRIPTION>y axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="1" value="y"/>
+            <PARAM name="tlmin" datatype="double" value="-1.5" unit="m"/>
+            <PARAM name="tlmax" datatype="double" value="1.5" unit="m"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="Z_Axis">
+            <DESCRIPTION>z axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="1" value="z"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="m"/>
+            <PARAM name="tlmax" datatype="double" value="1000.0" unit="m"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Point">
+        <PARAM name="x" datatype="double" value="0.0" unit="m"/>
+        <PARAM name="y" datatype="double" value="0.0" unit="m"/>
+        <PARAM name="z" datatype="double" value="534.7" unit="m"/>
+        <GROUP name="spacesys" ref="_01bx4M7ETJXWcxU"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

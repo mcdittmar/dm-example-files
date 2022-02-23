@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_10AukhaQ4oycPJ62" dmtype="coords:TimeSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:TimeFrame">
+            <ATTRIBUTE dmrole="coords:TimeFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:TimeFrame.timescale">
+              <CONSTANT ref="_01Qguhm2dTtgVAD" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:ISOTime">
+        <ATTRIBUTE dmrole="coords:ISOTime.date">
+          <CONSTANT ref="_02zZDzKxTfVie1t" dmtype="ivoa:datetime"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_10AukhaQ4oycPJ62</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_10AukhaQ4oycPJ6" name="TimeSys">
+        <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+        <GROUP name="TimeFrame">
+          <DESCRIPTION>Time frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01Qguhm2dTtgVAD" name="tscale" datatype="char" arraysize="2" value="TT"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="DateObs">
+        <PARAM ID="_02zZDzKxTfVie1t" name="date" datatype="char" arraysize="19" value="2000-09-02T01:10:14"/>
+        <GROUP name="coordsys" ref="_10AukhaQ4oycPJ6"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

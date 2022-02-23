@@ -1,0 +1,19 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_9XfLKmrjxFP5Vkg' name='GenericSys' vodml_role='coords:GenericSys' vodml_type='coords:GenericSys'>
+      <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+    </OBJECT>
+    <DATATYPE ID='_03Y9upPqe85fbjQ' name='PhysicalCoord' vodml_role='coords:PhysicalCoordinate' vodml_type='coords:PhysicalCoordinate'>
+      <ATTRIBUTES>
+        <DATATYPE ID='_03ZAUgOZMuwALqZ' name='UMAG' vodml_role='coords:PhysicalCoordinate.cval' vodml_type='ivoa:RealQuantity' value='-0.28' unit='mag'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_0313DNqJ8fmOKRy' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:GenericSys' target='_9XfLKmrjxFP5Vkg'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

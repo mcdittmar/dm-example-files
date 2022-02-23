@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01bx4M7ETJXWcxU">
+    <coordSpace xsi:type="coords:CartesianCoordSpace">
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>detx</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>0.5</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>8192.5</value>
+        </domainMax>
+      </axis>
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>dety</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>0.5</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>8192.5</value>
+        </domainMax>
+      </axis>
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>detz</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>mm</unit>
+          <value>0.0</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>mm</unit>
+          <value>100.0</value>
+        </domainMax>
+      </axis>
+    </coordSpace>
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>CUSTOM</spaceRefFrame>
+    </frame>
+  </coords:SpaceSys>
+  <meas:Position>
+    <error xsi:type="meas:Error">
+      <sysError xsi:type="meas:Ellipsoid">
+        <semiAxis xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>10.025</value>
+        </semiAxis>
+        <semiAxis xsi:type="ivoa:RealQuantity">
+          <unit>pixel</unit>
+          <value>8.5</value>
+        </semiAxis>
+        <semiAxis xsi:type="ivoa:RealQuantity">
+          <unit>mm</unit>
+          <value>0.1</value>
+        </semiAxis>
+        <posAngle xsi:type="ivoa:RealQuantity">
+          <unit>deg</unit>
+          <value>0.0</value>
+        </posAngle>
+        <posAngle xsi:type="ivoa:RealQuantity">
+          <unit>deg</unit>
+          <value>17.0</value>
+        </posAngle>
+      </sysError>
+    </error>
+    <coord xsi:type="coords:CartesianPoint">
+      <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+      <x xsi:type="ivoa:RealQuantity">
+        <unit>pixel</unit>
+        <value>3156</value>
+      </x>
+      <y xsi:type="ivoa:RealQuantity">
+        <unit>pixel</unit>
+        <value>4497</value>
+      </y>
+      <z xsi:type="ivoa:RealQuantity">
+        <unit>mm</unit>
+        <value>17.332</value>
+      </z>
+    </coord>
+  </meas:Position>
+</meas:EXAMPLE>

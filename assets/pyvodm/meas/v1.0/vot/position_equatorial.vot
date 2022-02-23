@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="ICRSFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="EQPOS">
+        <DESCRIPTION>Equatorial position</DESCRIPTION>
+        <GROUP name="EQPOS_Coord">
+          <PARAM name="ra" datatype="double" value="12.976853803085" unit="deg">
+            <DESCRIPTION>Right Ascension</DESCRIPTION>
+          </PARAM>
+          <PARAM name="dec" datatype="double" value="-72.958015813264" unit="deg">
+            <DESCRIPTION>Declination</DESCRIPTION>
+          </PARAM>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="EQPOS_Error">
+          <GROUP name="EQPOS_STAT_ERROR">
+            <PARAM name="semiAxis1" datatype="double" value="1.3899E-04" unit="deg">
+              <DESCRIPTION>Position error - DEC</DESCRIPTION>
+            </PARAM>
+            <PARAM name="semiAxis2" datatype="double" value="2.7400E-04" unit="deg">
+              <DESCRIPTION>Position error - RA</DESCRIPTION>
+            </PARAM>
+            <PARAM name="posAngle" datatype="double" value="23.449" unit="deg">
+              <DESCRIPTION>Position error - Rotation</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

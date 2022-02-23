@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="DETSpace">
+          <DESCRIPTION>Detector coordinate space</DESCRIPTION>
+          <GROUP name="DETX_Axis">
+            <DESCRIPTION>detx axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="4" value="detx"/>
+            <PARAM name="tlmin" datatype="double" value="0.5" unit="pixel"/>
+            <PARAM name="tlmax" datatype="double" value="8192.5" unit="pixel"/>
+          </GROUP>
+          <GROUP name="DETY_Axis">
+            <DESCRIPTION>dety axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="4" value="dety"/>
+            <PARAM name="tlmin" datatype="double" value="0.5" unit="pixel"/>
+            <PARAM name="tlmax" datatype="double" value="8192.5" unit="pixel"/>
+          </GROUP>
+          <GROUP name="DETZ_Axis">
+            <DESCRIPTION>detz axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="4" value="detz"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="mm"/>
+            <PARAM name="tlmax" datatype="double" value="100.0" unit="mm"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="DETFrame">
+          <DESCRIPTION>Space frame - Detector</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="DET">
+        <DESCRIPTION>Detector position</DESCRIPTION>
+        <GROUP name="DET_Coord">
+          <PARAM name="detx" datatype="double" value="3156" unit="pixel"/>
+          <PARAM name="dety" datatype="double" value="4497" unit="pixel"/>
+          <PARAM name="detz" datatype="double" value="17.332" unit="mm"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="DET_Error">
+          <GROUP name="DET_SysError">
+            <PARAM name="semiAxis1" datatype="double" value="10.025" unit="pixel">
+              <DESCRIPTION>SemiAxis - detx</DESCRIPTION>
+            </PARAM>
+            <PARAM name="semiAxis2" datatype="double" value="8.5" unit="pixel">
+              <DESCRIPTION>SemiAxis - dety</DESCRIPTION>
+            </PARAM>
+            <PARAM name="semiAxis3" datatype="double" value="0.1" unit="mm">
+              <DESCRIPTION>SemiAxis - detz</DESCRIPTION>
+            </PARAM>
+            <PARAM name="posAngle1" datatype="double" value="0.0" unit="deg">
+              <DESCRIPTION>Position angle</DESCRIPTION>
+            </PARAM>
+            <PARAM name="posAngle2" datatype="double" value="17.0" unit="deg">
+              <DESCRIPTION>Position angle</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

@@ -1,0 +1,39 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='ICRSFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='ICRS'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_07SQBQtBMOTMduW' name='PM' vodml_role='meas:ProperMotion' vodml_type='meas:ProperMotion'>
+      <DESCRIPTION>Proper Motion</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02C917rJVOjUaWQ' name='PM_COORD' vodml_role='meas:ProperMotion.coord' vodml_type='coords:LonLatPoint'>
+          <DESCRIPTION>Proper Motion Coordinate</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_02KgFCF55IJf891' name='lon' vodml_role='coords:LonLatPoint.lon' vodml_type='ivoa:RealQuantity' value='-356.01' unit='mas/yr'/>
+            <DATATYPE ID='_02cw1cDK4rranne' name='lat' vodml_role='coords:LonLatPoint.lat' vodml_type='ivoa:RealQuantity' value='1742.47' unit='mas/yr'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_02v9Ft5K5Nd4SvI' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

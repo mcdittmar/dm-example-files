@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_9UjJocEEjPPVk9O" name="PixelCoordSys">
+        <GROUP name="Image">
+          <PARAM name="handedness" datatype="char" arraysize="5" value="right"/>
+          <GROUP name="Axis1">
+            <PARAM name="name" datatype="char" arraysize="2" value="#1"/>
+            <PARAM name="length" datatype="long" value="512"/>
+          </GROUP>
+          <GROUP name="Axis2">
+            <PARAM name="name" datatype="char" arraysize="2" value="#2"/>
+            <PARAM name="length" datatype="long" value="512"/>
+          </GROUP>
+          <GROUP name="Axis3">
+            <PARAM name="name" datatype="char" arraysize="2" value="#3"/>
+            <PARAM name="length" datatype="long" value="26"/>
+          </GROUP>
+          <GROUP name="Axis4">
+            <PARAM name="name" datatype="char" arraysize="2" value="#4"/>
+            <PARAM name="length" datatype="long" value="1"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PixCoord1">
+        <PARAM name="cval" datatype="int" value="100"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord2">
+        <PARAM name="cval" datatype="int" value="75"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord3">
+        <PARAM name="cval" datatype="int" value="12"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+      <GROUP name="PixCoord4">
+        <PARAM name="cval" datatype="int" value="0"/>
+        <GROUP name="coordSys" ref="_9UjJocEEjPPVk9O"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

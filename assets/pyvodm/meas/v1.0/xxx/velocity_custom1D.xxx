@@ -1,0 +1,68 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_08Cg2XN38Dysnaa' name='CoordSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <DESCRIPTION>DIST Velocity Space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_08KFWMKFbPI7Jwq' name='VDIST_R_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>VDIST Radial axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_08vPNGtbvEndRBc' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='dr/dt'/>
+                <DATATYPE ID='_08Hv0GOgPQv1xNf' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='m/s'/>
+                <DATATYPE ID='_082teH64rw79ozd' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='+Inf' unit='m/s'/>
+                <PRIMITIVE ID='_080jSRarBDZFC78' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='SpaceFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='CUSTOM'/>
+            <PRIMITIVE ID='_01f4rlk49aHEAS3' name='planetaryEphem' vodml_role='coords:SpaceFrame.planetaryEphem' vodml_type='ivoa:string' value='DE432'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_11nIhrfPXMzKINZ' name='VDIST' vodml_role='meas:Velocity' vodml_type='meas:Velocity'>
+      <DESCRIPTION>Generic Velocity (1D)</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_0570jr7ImKTh9rP' name='VDIST_Coord' vodml_role='meas:Velocity.coord' vodml_type='coords:GenericPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_05g5gBm4lh71UnL' name='r' vodml_role='coords:GenericPoint.axis1' vodml_type='ivoa:RealQuantity' value='0.00078' unit='km/yr'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_05irWNEIWnx7SZ2' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:CoordSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12B2v5BbMNRXlLV' name='VDIST_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_1321R6CwnGQXhZ3' name='VDIST_SYS_ERROR' vodml_role='meas:Error.sysError' vodml_type='meas:Bounds1D'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13oue29vm5B0INF' name='low' vodml_role='meas:Bounds1D.loLimit' vodml_type='ivoa:RealQuantity' value='0.000723' unit='km/yr'>
+                  <DESCRIPTION>VDIST Radial Error: lower limit</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13zLx4wknmZD9OH' name='high' vodml_role='meas:Bounds1D.hiLimit' vodml_type='ivoa:RealQuantity' value='0.000879' unit='km/yr'>
+                  <DESCRIPTION>VDIST Radial Error: upper limit</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

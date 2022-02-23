@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01dasjgawtgfvis2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_02aCBjCcUwLG1Pi" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01Su4hhvoAaELji" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:Position">
+        <ATTRIBUTE dmrole="meas:Position.coord">
+          <INSTANCE dmtype="coords:LonLatPoint">
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lon">
+              <CONSTANT ref="_03UfelC5m9lJxAq" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lat">
+              <CONSTANT ref="_034aCHy88vcL1R6" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01dasjgawtgfvis2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PixelSpace">
+        <ATTRIBUTE dmrole="coords:PixelSpace.handedness">
+          <CONSTANT ref="_04ixX8vKZUzOcSp" dmtype="coords:Handedness"/>
+        </ATTRIBUTE>
+        <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+          <INSTANCE dmtype="coords:BinnedAxis">
+            <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+              <CONSTANT ref="_045jYXjoNLERt2D" dmtype="ivoa:nonnegativeInteger"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+          <INSTANCE dmtype="coords:BinnedAxis">
+            <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+              <CONSTANT ref="_04fliHFQ9T3vRji" dmtype="ivoa:nonnegativeInteger"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01dasjgawtgfvis" name="SpaceSys">
+        <GROUP name="ICRSFrame">
+          <GROUP name="RefPosition">
+            <PARAM ID="_02aCBjCcUwLG1Pi" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01Su4hhvoAaELji" name="refframe" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Pointing">
+        <DESCRIPTION>Pointing</DESCRIPTION>
+        <GROUP name="POINT">
+          <PARAM ID="_03UfelC5m9lJxAq" name="lon" datatype="double" value="278.38604502313" unit="deg">
+            <DESCRIPTION>Pointing RA</DESCRIPTION>
+          </PARAM>
+          <PARAM ID="_034aCHy88vcL1R6" name="lat" datatype="double" value="-10.589913302866" unit="deg">
+            <DESCRIPTION>Pointing DEC</DESCRIPTION>
+          </PARAM>
+          <GROUP name="coordsys" ref="_01dasjgawtgfvis"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="CoordSpace">
+        <PARAM ID="_04ixX8vKZUzOcSp" name="handed" datatype="char" arraysize="5" value="right"/>
+        <GROUP name="Axis1">
+          <PARAM ID="_045jYXjoNLERt2D" name="length" datatype="long" value="10"/>
+        </GROUP>
+        <GROUP name="Axis2">
+          <PARAM ID="_04fliHFQ9T3vRji" name="length" datatype="long" value="20"/>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

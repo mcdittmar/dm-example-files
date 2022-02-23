@@ -1,0 +1,33 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='ICRSFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='ICRS'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02DrY9yBi2oDbK3' name='Point' vodml_role='coords:LonLatPoint' vodml_type='coords:LonLatPoint'>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02L7QMpFlxbOWYk' name='ra' vodml_role='coords:LonLatPoint.lon' vodml_type='ivoa:RealQuantity' value='12.976853803085' unit='deg'/>
+        <DATATYPE ID='_02IrvRAzLhB4xUs' name='dec' vodml_role='coords:LonLatPoint.lat' vodml_type='ivoa:RealQuantity' value='-72.958015813264' unit='deg'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02hKu7qfmmL0Eb5' name='spacesys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

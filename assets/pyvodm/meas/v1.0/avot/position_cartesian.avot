@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:CartesianCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8ngdZ1wCczRVicP" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_882Jt08BxhtKWf8" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8Th2GvAGzyEzCHX" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8H8XbgXSahAc21K" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8WA8solmzW7hMcY" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8XY57Wvbls6KvLy" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8S7aq1wzPFL97jY" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_86NOlm0SANoSw1V" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8sxSkxnM4rW864Z" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_010QIWcuKgMjg5i" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:Position">
+        <ATTRIBUTE dmrole="meas:Position.coord">
+          <INSTANCE dmtype="coords:CartesianPoint">
+            <ATTRIBUTE dmrole="coords:CartesianPoint.x">
+              <CONSTANT ref="_02yCGeLhaI8qv5V" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:CartesianPoint.y">
+              <CONSTANT ref="_02PzBQctS6t04Ie" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:CartesianPoint.z">
+              <CONSTANT ref="_02ViEFWCnhUhqTF" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+        <COMPOSITION dmrole="meas:Measure.error"> 
+          <INSTANCE dmtype="meas:Error">
+            <ATTRIBUTE dmrole="meas:Error.sysError">
+              <INSTANCE dmtype="meas:Ellipsoid">
+                <ATTRIBUTE dmrole="meas:Ellipsoid.semiAxis">
+                  <CONSTANT ref="_13fKRwnCDUjToiS" dmtype="ivoa:RealQuantity"/>
+                  <CONSTANT ref="_13cL2nZnQvO4Tm8" dmtype="ivoa:RealQuantity"/>
+                  <CONSTANT ref="_13M5YMmEEzEMdNl" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="meas:Ellipsoid.posAngle">
+                  <CONSTANT ref="_13WCyJljTR2Fkre" dmtype="ivoa:RealQuantity"/>
+                  <CONSTANT ref="_13XCeDE3FKWjS6O" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="DETSpace">
+          <DESCRIPTION>Detector coordinate space</DESCRIPTION>
+          <GROUP name="DETX_Axis">
+            <DESCRIPTION>detx axis</DESCRIPTION>
+            <PARAM ID="_8ngdZ1wCczRVicP" name="name" datatype="char" arraysize="4" value="detx"/>
+            <PARAM ID="_882Jt08BxhtKWf8" name="tlmin" datatype="double" value="0.5" unit="pixel"/>
+            <PARAM ID="_8Th2GvAGzyEzCHX" name="tlmax" datatype="double" value="8192.5" unit="pixel"/>
+          </GROUP>
+          <GROUP name="DETY_Axis">
+            <DESCRIPTION>dety axis</DESCRIPTION>
+            <PARAM ID="_8H8XbgXSahAc21K" name="name" datatype="char" arraysize="4" value="dety"/>
+            <PARAM ID="_8WA8solmzW7hMcY" name="tlmin" datatype="double" value="0.5" unit="pixel"/>
+            <PARAM ID="_8XY57Wvbls6KvLy" name="tlmax" datatype="double" value="8192.5" unit="pixel"/>
+          </GROUP>
+          <GROUP name="DETZ_Axis">
+            <DESCRIPTION>detz axis</DESCRIPTION>
+            <PARAM ID="_8S7aq1wzPFL97jY" name="name" datatype="char" arraysize="4" value="detz"/>
+            <PARAM ID="_86NOlm0SANoSw1V" name="tlmin" datatype="double" value="0.0" unit="mm"/>
+            <PARAM ID="_8sxSkxnM4rW864Z" name="tlmax" datatype="double" value="100.0" unit="mm"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="DETFrame">
+          <DESCRIPTION>Space frame - Detector</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_010QIWcuKgMjg5i" name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="DET">
+        <DESCRIPTION>Detector position</DESCRIPTION>
+        <GROUP name="DET_Coord">
+          <PARAM ID="_02yCGeLhaI8qv5V" name="detx" datatype="double" value="3156" unit="pixel"/>
+          <PARAM ID="_02PzBQctS6t04Ie" name="dety" datatype="double" value="4497" unit="pixel"/>
+          <PARAM ID="_02ViEFWCnhUhqTF" name="detz" datatype="double" value="17.332" unit="mm"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="DET_Error">
+          <GROUP name="DET_SysError">
+            <PARAM ID="_13fKRwnCDUjToiS" name="semiAxis1" datatype="double" value="10.025" unit="pixel">
+              <DESCRIPTION>SemiAxis - detx</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13cL2nZnQvO4Tm8" name="semiAxis2" datatype="double" value="8.5" unit="pixel">
+              <DESCRIPTION>SemiAxis - dety</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13M5YMmEEzEMdNl" name="semiAxis3" datatype="double" value="0.1" unit="mm">
+              <DESCRIPTION>SemiAxis - detz</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13WCyJljTR2Fkre" name="posAngle1" datatype="double" value="0.0" unit="deg">
+              <DESCRIPTION>Position angle</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13XCeDE3FKWjS6O" name="posAngle2" datatype="double" value="17.0" unit="deg">
+              <DESCRIPTION>Position angle</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

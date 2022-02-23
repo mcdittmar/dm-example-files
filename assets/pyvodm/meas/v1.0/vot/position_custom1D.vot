@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <DESCRIPTION>Custom 1D Coordinate Space</DESCRIPTION>
+          <GROUP name="MSC_R_Axis">
+            <DESCRIPTION>MSC Radial axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="1" value="r"/>
+            <PARAM name="tlmin" datatype="double" value="10.0" unit="m"/>
+            <PARAM name="tlmax" datatype="double" value="+Inf" unit="m"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="DIST">
+        <DESCRIPTION>Position (1D)</DESCRIPTION>
+        <GROUP name="DIST_Coord">
+          <PARAM name="z" datatype="double" value="750857306.2" unit="km"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="DIST_Error">
+          <GROUP name="DIST_SYS_ERROR">
+            <PARAM name="plus" datatype="double" value="10000.0" unit="km">
+              <DESCRIPTION>MSC Radial Error: positive axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM name="minus" datatype="double" value="100.0" unit="km">
+              <DESCRIPTION>MSC Radial Error: negative axis direction</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

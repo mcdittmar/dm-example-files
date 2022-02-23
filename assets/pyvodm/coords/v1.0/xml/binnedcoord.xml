@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:GenericSys ID="_9XfLKmrjxFP5Vkg">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:BinnedAxis">
+        <name>pha</name>
+        <length>36855</length>
+      </axis>
+    </coordSpace>
+  </coords:GenericSys>
+  <coords:BinnedCoordinate>
+    <coordSys IDREF="_9XfLKmrjxFP5Vkg"/>
+    <cval>3572</cval>
+  </coords:BinnedCoordinate>
+</coords:EXAMPLE>

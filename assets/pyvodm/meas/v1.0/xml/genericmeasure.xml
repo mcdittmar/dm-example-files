@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:GenericSys ID="_01qjaTuuZJmUZTd">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>mag</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>mag</unit>
+          <value>-30</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>mag</unit>
+          <value>30</value>
+        </domainMax>
+      </axis>
+    </coordSpace>
+  </coords:GenericSys>
+  <meas:GenericMeasure>
+    <ucd>phot.mag</ucd>
+    <error xsi:type="meas:Error">
+      <statError xsi:type="meas:Symmetrical">
+        <radius xsi:type="ivoa:RealQuantity">
+          <unit>mag</unit>
+          <value>0.001</value>
+        </radius>
+      </statError>
+    </error>
+    <coord xsi:type="coords:PhysicalCoordinate">
+      <coordSys IDREF="_01qjaTuuZJmUZTd"/>
+      <cval xsi:type="ivoa:RealQuantity">
+        <value>-0.28</value>
+      </cval>
+    </coord>
+  </meas:GenericMeasure>
+</meas:EXAMPLE>

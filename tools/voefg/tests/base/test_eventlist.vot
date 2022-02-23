@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01dasjgawtgfvis" name="SpaceSys">
+        <GROUP name="ICRSFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refframe" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Pointing">
+        <DESCRIPTION>Pointing</DESCRIPTION>
+        <GROUP name="POINT">
+          <PARAM name="lon" datatype="double" value="278.38604502313" unit="deg">
+            <DESCRIPTION>Pointing RA</DESCRIPTION>
+          </PARAM>
+          <PARAM name="lat" datatype="double" value="-10.589913302866" unit="deg">
+            <DESCRIPTION>Pointing DEC</DESCRIPTION>
+          </PARAM>
+          <GROUP name="coordsys" ref="_01dasjgawtgfvis"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="CoordSpace">
+        <PARAM name="handed" datatype="char" arraysize="5" value="right"/>
+        <GROUP name="Axis1">
+          <PARAM name="length" datatype="long" value="10"/>
+        </GROUP>
+        <GROUP name="Axis2">
+          <PARAM name="length" datatype="long" value="20"/>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

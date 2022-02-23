@@ -1,0 +1,61 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01dasjgawtgfvis' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <COMPOSITIONS>
+        <OBJECT ID='_01Y9upPqe85fbjQ' name='ICRSFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_023jAistBQTOKNq' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_02aCBjCcUwLG1Pi' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01Su4hhvoAaELji' name='refframe' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='ICRS'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_036EPB7YFJa6fVS' name='Pointing' vodml_role='meas:Position' vodml_type='meas:Position'>
+      <DESCRIPTION>Pointing</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_03aiYk9hDMxy8pT' name='POINT' vodml_role='meas:Position.coord' vodml_type='coords:LonLatPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_03UfelC5m9lJxAq' name='lon' vodml_role='coords:LonLatPoint.lon' vodml_type='ivoa:RealQuantity' value='278.38604502313' unit='deg'>
+              <DESCRIPTION>Pointing RA</DESCRIPTION>
+            </DATATYPE>
+            <DATATYPE ID='_034aCHy88vcL1R6' name='lat' vodml_role='coords:LonLatPoint.lat' vodml_type='ivoa:RealQuantity' value='-10.589913302866' unit='deg'>
+              <DESCRIPTION>Pointing DEC</DESCRIPTION>
+            </DATATYPE>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_03ObplNQf1m07nO' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01dasjgawtgfvis'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+    </OBJECT>
+    <OBJECT ID='_04wTOSSA1w5Aw06' name='CoordSpace' vodml_role='coords:PixelSpace' vodml_type='coords:PixelSpace'>
+      <ATTRIBUTES>
+        <ENUMERATION ID='_04ixX8vKZUzOcSp' name='handed' vodml_role='coords:PixelSpace.handedness' vodml_type='coords:Handedness' value='right'>
+          <LITERAL vodmlid='coords:Handedness.left' label='left' />
+          <LITERAL vodmlid='coords:Handedness.right' label='right' />
+        </ENUMERATION>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_04QZ6BvZNHCIDba' name='Axis1' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+          <ATTRIBUTES>
+            <PRIMITIVE ID='_045jYXjoNLERt2D' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='10'/>
+          </ATTRIBUTES>
+        </OBJECT>
+        <OBJECT ID='_04MiCX0Xaz1AjIy' name='Axis2' vodml_role='coords:CoordSpace.axis' vodml_type='coords:BinnedAxis'>
+          <ATTRIBUTES>
+            <PRIMITIVE ID='_04fliHFQ9T3vRji' name='length' vodml_role='coords:BinnedAxis.length' vodml_type='ivoa:nonnegativeInteger' value='20'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

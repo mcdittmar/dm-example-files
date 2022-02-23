@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01R8vaNX69SXh0K" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:ProperMotion">
+        <ATTRIBUTE dmrole="meas:ProperMotion.coord">
+          <INSTANCE dmtype="coords:LonLatPoint">
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lon">
+              <CONSTANT ref="_02KgFCF55IJf891" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:LonLatPoint.lat">
+              <CONSTANT ref="_02cw1cDK4rranne" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="ICRSFrame">
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01R8vaNX69SXh0K" name="refFrame" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PM">
+        <DESCRIPTION>Proper Motion</DESCRIPTION>
+        <GROUP name="PM_COORD">
+          <DESCRIPTION>Proper Motion Coordinate</DESCRIPTION>
+          <PARAM ID="_02KgFCF55IJf891" name="lon" datatype="double" value="-356.01" unit="mas/yr"/>
+          <PARAM ID="_02cw1cDK4rranne" name="lat" datatype="double" value="1742.47" unit="mas/yr"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <DESCRIPTION>Custom Coordinate Space</DESCRIPTION>
+          <GROUP name="PLANE_Theta_Axis">
+            <DESCRIPTION>PLANE Off-Axis angle</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="5" value="theta"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="arcmin"/>
+            <PARAM name="tlmax" datatype="double" value="30.0" unit="arcmin"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="PLANE_Phi_Axis">
+            <DESCRIPTION>PLANE Azimuth angle</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="3" value="phi"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="deg"/>
+            <PARAM name="tlmax" datatype="double" value="360.0" unit="deg"/>
+            <PARAM name="cyclic" datatype="boolean" value="TRUE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PLANE">
+        <DESCRIPTION>Position (2D)</DESCRIPTION>
+        <GROUP name="PLANE_Coord">
+          <PARAM name="theta" datatype="double" value="0.3808320" unit="deg"/>
+          <PARAM name="phi" datatype="double" value="250.356132" unit="deg"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="PLANE_Error">
+          <GROUP name="PLANE_SYS_ERROR">
+            <PARAM name="plus_t" datatype="double" value="0.023" unit="arcmin">
+              <DESCRIPTION>PLANE Theta Error: positive axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM name="plus_p" datatype="double" value="0.001388" unit="deg">
+              <DESCRIPTION>PLANE Phi Error: positive axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM name="minus_t" datatype="double" value="0.025" unit="arcmin">
+              <DESCRIPTION>PLANE Theta Error: negative axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM name="minus_p" datatype="double" value="0.001944" unit="deg">
+              <DESCRIPTION>PLANE Phi Error: negative axis direction</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

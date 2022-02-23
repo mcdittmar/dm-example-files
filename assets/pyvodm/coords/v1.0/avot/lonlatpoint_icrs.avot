@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01R8vaNX69SXh0K" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:LonLatPoint">
+        <ATTRIBUTE dmrole="coords:LonLatPoint.lon">
+          <CONSTANT ref="_02L7QMpFlxbOWYk" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <ATTRIBUTE dmrole="coords:LonLatPoint.lat">
+          <CONSTANT ref="_02IrvRAzLhB4xUs" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="ICRSFrame">
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01R8vaNX69SXh0K" name="refFrame" datatype="char" arraysize="4" value="ICRS"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Point">
+        <PARAM ID="_02L7QMpFlxbOWYk" name="ra" datatype="double" value="12.976853803085" unit="deg"/>
+        <PARAM ID="_02IrvRAzLhB4xUs" name="dec" datatype="double" value="-72.958015813264" unit="deg"/>
+        <GROUP name="spacesys" ref="_01bx4M7ETJXWcxU"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01bx4M7ETJXWcxU">
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>ICRS</spaceRefFrame>
+    </frame>
+  </coords:SpaceSys>
+  <meas:ProperMotion>
+    <coord xsi:type="coords:LonLatPoint">
+      <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+      <lon xsi:type="ivoa:RealQuantity">
+        <unit>mas/yr</unit>
+        <value>-356.01</value>
+      </lon>
+      <lat xsi:type="ivoa:RealQuantity">
+        <unit>mas/yr</unit>
+        <value>1742.47</value>
+      </lat>
+    </coord>
+  </meas:ProperMotion>
+</meas:EXAMPLE>

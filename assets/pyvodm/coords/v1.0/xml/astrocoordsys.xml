@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:AstroCoordSystem>
+    <coordSys ID="_01bx4M7ETJXWcxU" xsi:type="coords:SpaceSys">
+      <frame xsi:type="coords:SpaceFrame">
+        <refPosition xsi:type="coords:StdRefLocation">
+          <position>TOPOCENTER</position>
+        </refPosition>
+        <spaceRefFrame>ICRS</spaceRefFrame>
+        <planetaryEphem>DE432</planetaryEphem>
+      </frame>
+    </coordSys>
+    <coordSys xsi:type="coords:TimeSys">
+      <frame xsi:type="coords:TimeFrame">
+        <refPosition xsi:type="coords:StdRefLocation">
+          <position>TOPOCENTER</position>
+        </refPosition>
+        <timescale>TT</timescale>
+        <refDirection xsi:type="coords:CustomRefLocation">
+          <epoch>J2014.25</epoch>
+          <position xsi:type="coords:LonLatPoint">
+            <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+            <lon xsi:type="ivoa:RealQuantity">
+              <unit>deg</unit>
+              <value>6.752477</value>
+            </lon>
+            <lat xsi:type="ivoa:RealQuantity">
+              <unit>deg</unit>
+              <value>-16.716116</value>
+            </lat>
+            <dist xsi:type="ivoa:RealQuantity">
+              <unit>ly</unit>
+              <value>8.6</value>
+            </dist>
+          </position>
+        </refDirection>
+      </frame>
+    </coordSys>
+    <coordSys xsi:type="coords:GenericSys">
+      <frame xsi:type="coords:GenericFrame">
+        <refPosition xsi:type="coords:StdRefLocation">
+          <position>TOPOCENTER</position>
+        </refPosition>
+        <planetaryEphem>DE432</planetaryEphem>
+      </frame>
+    </coordSys>
+  </coords:AstroCoordSystem>
+</coords:EXAMPLE>

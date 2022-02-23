@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01bx4M7ETJXWcxU">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>dr/dt</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>m/s</unit>
+          <value>0.0</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>m/s</unit>
+          <value>INF</value>
+        </domainMax>
+        <cyclic>false</cyclic>
+      </axis>
+    </coordSpace>
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>CUSTOM</spaceRefFrame>
+      <planetaryEphem>DE432</planetaryEphem>
+    </frame>
+  </coords:SpaceSys>
+  <meas:Velocity>
+    <error xsi:type="meas:Error">
+      <sysError xsi:type="meas:Bounds1D">
+        <loLimit xsi:type="ivoa:RealQuantity">
+          <unit>km/yr</unit>
+          <value>0.000723</value>
+        </loLimit>
+        <hiLimit xsi:type="ivoa:RealQuantity">
+          <unit>km/yr</unit>
+          <value>0.000879</value>
+        </hiLimit>
+      </sysError>
+    </error>
+    <coord xsi:type="coords:GenericPoint">
+      <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+      <axis1 xsi:type="ivoa:RealQuantity">
+        <unit>km/yr</unit>
+        <value>0.00078</value>
+      </axis1>
+    </coord>
+  </meas:Velocity>
+</meas:EXAMPLE>

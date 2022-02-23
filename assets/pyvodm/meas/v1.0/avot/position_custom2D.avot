@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:GenericCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_08zQPxNtK58IbJ0" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_08LsgToDwaEcW3j" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_08cAwUtJAr9euH3" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_08oGse9qs1NcOF7" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_08JMbIER2Sc11Dx" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_08Nb7Wx9E5D8C1b" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_08N2EztjEeO6WOK" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_08WIxMHl74GA0nM" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01R8vaNX69SXh0K" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:Position">
+        <ATTRIBUTE dmrole="meas:Position.coord">
+          <INSTANCE dmtype="coords:GenericPoint">
+            <ATTRIBUTE dmrole="coords:GenericPoint.axis1">
+              <CONSTANT ref="_05CwCWnTStM6RYM" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:GenericPoint.axis2">
+              <CONSTANT ref="_05fEtRJa62DE2Zr" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+        <COMPOSITION dmrole="meas:Measure.error"> 
+          <INSTANCE dmtype="meas:Error">
+            <ATTRIBUTE dmrole="meas:Error.sysError">
+              <INSTANCE dmtype="meas:Asymmetrical2D">
+                <ATTRIBUTE dmrole="meas:Asymmetrical2D.plus">
+                  <CONSTANT ref="_13RDZj2nDjlobcV" dmtype="ivoa:RealQuantity"/>
+                  <CONSTANT ref="_13ahMzpMe1KcZKT" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="meas:Asymmetrical2D.minus">
+                  <CONSTANT ref="_132XXYZ17KiXfXe" dmtype="ivoa:RealQuantity"/>
+                  <CONSTANT ref="_13hcjhmqgTW7gjE" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <DESCRIPTION>Custom Coordinate Space</DESCRIPTION>
+          <GROUP name="PLANE_Theta_Axis">
+            <DESCRIPTION>PLANE Off-Axis angle</DESCRIPTION>
+            <PARAM ID="_08zQPxNtK58IbJ0" name="name" datatype="char" arraysize="5" value="theta"/>
+            <PARAM ID="_08LsgToDwaEcW3j" name="tlmin" datatype="double" value="0.0" unit="arcmin"/>
+            <PARAM ID="_08cAwUtJAr9euH3" name="tlmax" datatype="double" value="30.0" unit="arcmin"/>
+            <PARAM ID="_08oGse9qs1NcOF7" name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="PLANE_Phi_Axis">
+            <DESCRIPTION>PLANE Azimuth angle</DESCRIPTION>
+            <PARAM ID="_08JMbIER2Sc11Dx" name="name" datatype="char" arraysize="3" value="phi"/>
+            <PARAM ID="_08Nb7Wx9E5D8C1b" name="tlmin" datatype="double" value="0.0" unit="deg"/>
+            <PARAM ID="_08N2EztjEeO6WOK" name="tlmax" datatype="double" value="360.0" unit="deg"/>
+            <PARAM ID="_08WIxMHl74GA0nM" name="cyclic" datatype="boolean" value="TRUE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01R8vaNX69SXh0K" name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PLANE">
+        <DESCRIPTION>Position (2D)</DESCRIPTION>
+        <GROUP name="PLANE_Coord">
+          <PARAM ID="_05CwCWnTStM6RYM" name="theta" datatype="double" value="0.3808320" unit="deg"/>
+          <PARAM ID="_05fEtRJa62DE2Zr" name="phi" datatype="double" value="250.356132" unit="deg"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="PLANE_Error">
+          <GROUP name="PLANE_SYS_ERROR">
+            <PARAM ID="_13RDZj2nDjlobcV" name="plus_t" datatype="double" value="0.023" unit="arcmin">
+              <DESCRIPTION>PLANE Theta Error: positive axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13ahMzpMe1KcZKT" name="plus_p" datatype="double" value="0.001388" unit="deg">
+              <DESCRIPTION>PLANE Phi Error: positive axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_132XXYZ17KiXfXe" name="minus_t" datatype="double" value="0.025" unit="arcmin">
+              <DESCRIPTION>PLANE Theta Error: negative axis direction</DESCRIPTION>
+            </PARAM>
+            <PARAM ID="_13hcjhmqgTW7gjE" name="minus_p" datatype="double" value="0.001944" unit="deg">
+              <DESCRIPTION>PLANE Phi Error: negative axis direction</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

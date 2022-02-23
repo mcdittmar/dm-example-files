@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <GROUP name="PHA_Axis">
+            <PARAM name="name" datatype="char" arraysize="3" value="pha"/>
+            <PARAM name="length" datatype="long" value="36855"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PHA">
+        <PARAM name="cval" datatype="int" value="3572"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

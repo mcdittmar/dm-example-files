@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_9XfLKmrjxFP5Vkg2" dmtype="coords:GenericSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:GenericCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:DiscreteSetAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8nlisUqd2Io5D8R" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:Polarization">
+        <ATTRIBUTE dmrole="meas:Polarization.coord">
+          <INSTANCE dmtype="coords:PolState">
+            <ATTRIBUTE dmrole="coords:PolState.cval">
+              <CONSTANT ref="_PA4tLl2LJn4Vk7j" dmtype="coords:PolStateEnum"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_9XfLKmrjxFP5Vkg2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <GROUP name="Polarization_Axis">
+            <PARAM ID="_8nlisUqd2Io5D8R" name="name" datatype="char" arraysize="12" value="polarization"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Polarization">
+        <DESCRIPTION>Polarization state</DESCRIPTION>
+        <GROUP name="PolState">
+          <PARAM ID="_PA4tLl2LJn4Vk7j" name="cval" datatype="char" arraysize="1" value="Q"/>
+          <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

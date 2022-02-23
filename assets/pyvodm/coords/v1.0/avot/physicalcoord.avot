@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_9XfLKmrjxFP5Vkg2" dmtype="coords:GenericSys"/>
+      <INSTANCE dmtype="coords:PhysicalCoordinate">
+        <ATTRIBUTE dmrole="coords:PhysicalCoordinate.cval">
+          <CONSTANT ref="_03ZAUgOZMuwALqZ" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9XfLKmrjxFP5Vkg2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+      </GROUP>
+      <GROUP name="PhysicalCoord">
+        <PARAM ID="_03ZAUgOZMuwALqZ" name="UMAG" datatype="double" value="-0.28" unit="mag"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

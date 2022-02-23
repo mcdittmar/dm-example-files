@@ -1,0 +1,47 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_9XfLKmrjxFP5Vkg' name='GenericSys' vodml_role='coords:GenericSys' vodml_type='coords:GenericSys'>
+      <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_8yhhMdGInRw7fzp' name='CoordSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <COMPOSITIONS>
+            <OBJECT ID='_8rK6BF36Mep0aH9' name='Polarization_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:DiscreteSetAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8nlisUqd2Io5D8R' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='polarization'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02qAUDD2b48U3tH' name='Polarization' vodml_role='coords:PolState' vodml_type='coords:PolState'>
+      <ATTRIBUTES>
+        <ENUMERATION ID='_02axyUDzNgzIUWu' name='cval' vodml_role='coords:PolState.cval' vodml_type='coords:PolStateEnum' value='PolStateEnum.I'>
+          <DESCRIPTION>Value given as vodml-id of the enumeration Literal</DESCRIPTION>
+          <LITERAL vodmlid='coords:PolStateEnum.I' label='I' />
+          <LITERAL vodmlid='coords:PolStateEnum.LL' label='LL' />
+          <LITERAL vodmlid='coords:PolStateEnum.LR' label='LR' />
+          <LITERAL vodmlid='coords:PolStateEnum.PA' label='PA' />
+          <LITERAL vodmlid='coords:PolStateEnum.PF' label='PF' />
+          <LITERAL vodmlid='coords:PolStateEnum.PP' label='PP' />
+          <LITERAL vodmlid='coords:PolStateEnum.Q' label='Q' />
+          <LITERAL vodmlid='coords:PolStateEnum.RL' label='RL' />
+          <LITERAL vodmlid='coords:PolStateEnum.RR' label='RR' />
+          <LITERAL vodmlid='coords:PolStateEnum.U' label='U' />
+          <LITERAL vodmlid='coords:PolStateEnum.V' label='V' />
+          <LITERAL vodmlid='coords:PolStateEnum.XX' label='XX' />
+          <LITERAL vodmlid='coords:PolStateEnum.XY' label='XY' />
+          <LITERAL vodmlid='coords:PolStateEnum.YX' label='YX' />
+          <LITERAL vodmlid='coords:PolStateEnum.YY' label='YY' />
+        </ENUMERATION>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02dccLAM4Taoc3G' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:CoordSys' target='_9XfLKmrjxFP5Vkg'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

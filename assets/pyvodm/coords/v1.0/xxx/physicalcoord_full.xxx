@@ -1,0 +1,33 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_9XfLKmrjxFP5Vkg' name='GenericSys' vodml_role='coords:GenericSys' vodml_type='coords:GenericSys'>
+      <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_8lxlG0Yiaxfalar' name='CoordSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <COMPOSITIONS>
+            <OBJECT ID='_8j5Dt7FSSYhSvix' name='Energy_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8VYHlttHlgLac2P' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='energy'/>
+                <DATATYPE ID='_8ppsLcy0kowlG0W' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='eV'/>
+                <DATATYPE ID='_8sCii8emDILKX1s' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='1000000.0' unit='eV'/>
+                <PRIMITIVE ID='_8jrMPy7pV4G5xHZ' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <DATATYPE ID='_02JqTZPz0UWxVzy' name='Energy' vodml_role='coords:PhysicalCoordinate' vodml_type='coords:PhysicalCoordinate'>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02aOjYeul6zHKxB' name='cval' vodml_role='coords:PhysicalCoordinate.cval' vodml_type='ivoa:RealQuantity' value='13950.9433593750' unit='eV'/>
+      </ATTRIBUTES>
+      <REFERENCES>
+        <REFERENCE ID='_02x151CCunV7Os7' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:CoordSys' target='_9XfLKmrjxFP5Vkg'/>
+      </REFERENCES>
+    </DATATYPE>
+  </METADATA>
+</DOCUMENT>
+

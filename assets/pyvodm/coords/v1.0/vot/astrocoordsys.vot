@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP name="AstroCoordSys">
+        <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+          <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+          <GROUP name="ICRSFrame">
+            <GROUP name="RefPosition">
+              <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+            </GROUP>
+            <PARAM name="refFrame" datatype="char" arraysize="4" value="ICRS"/>
+            <PARAM name="ephemeris" datatype="char" arraysize="5" value="DE432"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="TimeSys">
+          <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+          <GROUP name="TimeFrame">
+            <GROUP name="TRefPosition">
+              <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+            </GROUP>
+            <PARAM name="tscale" datatype="char" arraysize="2" value="TT"/>
+            <GROUP name="RefDirection">
+              <PARAM name="epoch" datatype="char" arraysize="8" value="J2014.25"/>
+              <GROUP name="RefDirPos">
+                <PARAM name="ra" datatype="double" value="6.752477" unit="deg"/>
+                <PARAM name="dec" datatype="double" value="-16.716116" unit="deg"/>
+                <PARAM name="dist" datatype="double" value="8.6" unit="ly"/>
+                <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+              </GROUP>
+            </GROUP>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpecSys">
+          <DESCRIPTION>Spectral domain coordinate system</DESCRIPTION>
+          <GROUP name="SpectralFrame">
+            <GROUP name="SRefPosition">
+              <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+            </GROUP>
+            <PARAM name="ephemeris" datatype="char" arraysize="5" value="DE432"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

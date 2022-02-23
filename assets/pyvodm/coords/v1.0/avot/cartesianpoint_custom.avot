@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01bx4M7ETJXWcxU2" dmtype="coords:SpaceSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:CartesianCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8zY8o9RzwgAGqSe" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8q3yKYZsCGEsTX3" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8dxOvWZO8Pq3fK5" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_8BB30N3uUFlkLs0" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8EswWcL3gAAdGtv" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8LDjzFDKfhCR3On" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8NXdIpPM18G3Zxl" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_8Bg9YvFjvuoNxIq" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8o30AB5xvOtLVim" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8JUpdGad7e9G7ep" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8eCAcmtJNrX8fdi" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_8w2E5q40nKqACPV" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.frame"> 
+          <INSTANCE dmtype="coords:SpaceFrame">
+            <ATTRIBUTE dmrole="coords:SpaceFrame.refPosition">
+              <INSTANCE dmtype="coords:StdRefLocation">
+                <ATTRIBUTE dmrole="coords:StdRefLocation.position">
+                  <CONSTANT ref="_01AKiqTYFjVfg5H" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+            <ATTRIBUTE dmrole="coords:SpaceFrame.spaceRefFrame">
+              <CONSTANT ref="_01R8vaNX69SXh0K" dmtype="ivoa:string"/>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:CartesianPoint">
+        <ATTRIBUTE dmrole="coords:CartesianPoint.x">
+          <CONSTANT ref="_02L7QMpFlxbOWYk" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <ATTRIBUTE dmrole="coords:CartesianPoint.y">
+          <CONSTANT ref="_02IrvRAzLhB4xUs" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <ATTRIBUTE dmrole="coords:CartesianPoint.z">
+          <CONSTANT ref="_02cFTUUflZiA1ez" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_01bx4M7ETJXWcxU2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CartesianSpace">
+          <DESCRIPTION>Custom cartesian coordinate space</DESCRIPTION>
+          <GROUP name="X_Axis">
+            <DESCRIPTION>x axis</DESCRIPTION>
+            <PARAM ID="_8zY8o9RzwgAGqSe" name="name" datatype="char" arraysize="1" value="x"/>
+            <PARAM ID="_8q3yKYZsCGEsTX3" name="tlmin" datatype="double" value="-1.5" unit="m"/>
+            <PARAM ID="_8dxOvWZO8Pq3fK5" name="tlmax" datatype="double" value="1.5" unit="m"/>
+            <PARAM ID="_8BB30N3uUFlkLs0" name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="Y_Axis">
+            <DESCRIPTION>y axis</DESCRIPTION>
+            <PARAM ID="_8EswWcL3gAAdGtv" name="name" datatype="char" arraysize="1" value="y"/>
+            <PARAM ID="_8LDjzFDKfhCR3On" name="tlmin" datatype="double" value="-1.5" unit="m"/>
+            <PARAM ID="_8NXdIpPM18G3Zxl" name="tlmax" datatype="double" value="1.5" unit="m"/>
+            <PARAM ID="_8Bg9YvFjvuoNxIq" name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="Z_Axis">
+            <DESCRIPTION>z axis</DESCRIPTION>
+            <PARAM ID="_8o30AB5xvOtLVim" name="name" datatype="char" arraysize="1" value="z"/>
+            <PARAM ID="_8JUpdGad7e9G7ep" name="tlmin" datatype="double" value="0.0" unit="m"/>
+            <PARAM ID="_8eCAcmtJNrX8fdi" name="tlmax" datatype="double" value="1000.0" unit="m"/>
+            <PARAM ID="_8w2E5q40nKqACPV" name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM ID="_01AKiqTYFjVfg5H" name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM ID="_01R8vaNX69SXh0K" name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Point">
+        <PARAM ID="_02L7QMpFlxbOWYk" name="x" datatype="double" value="0.0" unit="m"/>
+        <PARAM ID="_02IrvRAzLhB4xUs" name="y" datatype="double" value="0.0" unit="m"/>
+        <PARAM ID="_02cFTUUflZiA1ez" name="z" datatype="double" value="534.7" unit="m"/>
+        <GROUP name="spacesys" ref="_01bx4M7ETJXWcxU"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

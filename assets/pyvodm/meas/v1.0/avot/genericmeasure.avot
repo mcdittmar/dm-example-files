@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>meas</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_01qjaTuuZJmUZTd2" dmtype="coords:GenericSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:GenericCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_851omWRNp9EpEOp" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8D1YHaRXQC6pjzI" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8tmIkebwkYQ7ynP" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="meas:GenericMeasure">
+        <ATTRIBUTE dmrole="meas:Measure.ucd">
+          <CONSTANT ref="_11C4f9alaalj4gz" dmtype="ivoa:string"/>
+        </ATTRIBUTE>
+        <ATTRIBUTE dmrole="meas:GenericMeasure.coord">
+          <INSTANCE dmtype="coords:PhysicalCoordinate">
+            <ATTRIBUTE dmrole="coords:PhysicalCoordinate.cval">
+              <CONSTANT ref="_05ddijpxt8hHcj7" dmtype="ivoa:RealQuantity"/>
+            </ATTRIBUTE>
+            <REFERENCE dmrole="coords:Coordinate.coordSys">
+              <IDREF>_01qjaTuuZJmUZTd2</IDREF>
+            </REFERENCE>
+          </INSTANCE>
+        </ATTRIBUTE>
+        <COMPOSITION dmrole="meas:Measure.error"> 
+          <INSTANCE dmtype="meas:Error">
+            <ATTRIBUTE dmrole="meas:Error.statError">
+              <INSTANCE dmtype="meas:Symmetrical">
+                <ATTRIBUTE dmrole="meas:Symmetrical.radius">
+                  <CONSTANT ref="_13fKRwnCDUjToiS" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </ATTRIBUTE>
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_01qjaTuuZJmUZTd" name="MagSys">
+        <DESCRIPTION>Magnitude domain coordinate system</DESCRIPTION>
+        <GROUP name="MagSpace">
+          <DESCRIPTION>Magnitude coordinate space</DESCRIPTION>
+          <GROUP name="MagX_Axis">
+            <DESCRIPTION>Mag axis</DESCRIPTION>
+            <PARAM ID="_851omWRNp9EpEOp" name="name" datatype="char" arraysize="3" value="mag"/>
+            <PARAM ID="_8D1YHaRXQC6pjzI" name="tlmin" datatype="double" value="-30" unit="mag"/>
+            <PARAM ID="_8tmIkebwkYQ7ynP" name="tlmax" datatype="double" value="30" unit="mag"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Magnitude">
+        <DESCRIPTION>Magnitude measure</DESCRIPTION>
+        <PARAM ID="_11C4f9alaalj4gz" name="ucd" datatype="char" arraysize="8" value="phot.mag"/>
+        <GROUP name="Mag_Coord">
+          <DESCRIPTION>Generic physical coordinate</DESCRIPTION>
+          <PARAM ID="_05ddijpxt8hHcj7" name="umag" datatype="double" value="-0.28"/>
+          <GROUP name="coordsys" ref="_01qjaTuuZJmUZTd"/>
+        </GROUP>
+        <GROUP name="Mag_Error">
+          <GROUP name="MagStatError">
+            <PARAM ID="_13fKRwnCDUjToiS" name="radius" datatype="double" value="0.001" unit="mag">
+              <DESCRIPTION>Magnitude error radius</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

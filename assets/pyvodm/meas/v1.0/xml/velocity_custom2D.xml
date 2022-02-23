@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01bx4M7ETJXWcxU">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>dtheta/dt</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>deg/s</unit>
+          <value>0.00</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>deg/s</unit>
+          <value>INF</value>
+        </domainMax>
+        <cyclic>false</cyclic>
+      </axis>
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>dphi/dt</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>deg/s</unit>
+          <value>0.0</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>deg/s</unit>
+          <value>INF</value>
+        </domainMax>
+        <cyclic>false</cyclic>
+      </axis>
+    </coordSpace>
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>CUSTOM</spaceRefFrame>
+      <planetaryEphem>DE432</planetaryEphem>
+    </frame>
+  </coords:SpaceSys>
+  <meas:Velocity>
+    <error xsi:type="meas:Error">
+      <sysError xsi:type="meas:Bounds2D">
+        <loLimit xsi:type="ivoa:RealQuantity">
+          <unit>arcmin/s</unit>
+          <value>3.41e-7</value>
+        </loLimit>
+        <loLimit xsi:type="ivoa:RealQuantity">
+          <unit>arcmin/s</unit>
+          <value>8.21e-19</value>
+        </loLimit>
+        <hiLimit xsi:type="ivoa:RealQuantity">
+          <unit>arcmin/s</unit>
+          <value>3.55e-7</value>
+        </hiLimit>
+        <hiLimit xsi:type="ivoa:RealQuantity">
+          <unit>arcmin/s</unit>
+          <value>9.23e-19</value>
+        </hiLimit>
+      </sysError>
+    </error>
+    <coord xsi:type="coords:GenericPoint">
+      <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+      <axis1 xsi:type="ivoa:RealQuantity">
+        <unit>arcmin/s</unit>
+        <value>3.44e-7</value>
+      </axis1>
+      <axis2 xsi:type="ivoa:RealQuantity">
+        <unit>arcmin/s</unit>
+        <value>8.43e-19</value>
+      </axis2>
+    </coord>
+  </meas:Velocity>
+</meas:EXAMPLE>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <DESCRIPTION>MSC Velocity Space</DESCRIPTION>
+          <GROUP name="VMSC_R_Axis">
+            <DESCRIPTION>VMSC Radial axis</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="5" value="dr/dt"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="m/s"/>
+            <PARAM name="tlmax" datatype="double" value="+Inf" unit="m/s"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="VMSC_Theta_Axis">
+            <DESCRIPTION>VMSC Off-Axis angle</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="9" value="dtheta/dt"/>
+            <PARAM name="tlmin" datatype="double" value="0.00" unit="deg/s"/>
+            <PARAM name="tlmax" datatype="double" value="+Inf" unit="deg/s"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+          <GROUP name="VMSC_Phi_Axis">
+            <DESCRIPTION>VMSC Azimuth angle</DESCRIPTION>
+            <PARAM name="name" datatype="char" arraysize="7" value="dphi/dt"/>
+            <PARAM name="tlmin" datatype="double" value="0.0" unit="deg/s"/>
+            <PARAM name="tlmax" datatype="double" value="+Inf" unit="deg/s"/>
+            <PARAM name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+        <GROUP name="SpaceFrame">
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="6" value="CUSTOM"/>
+          <PARAM name="planetaryEphem" datatype="char" arraysize="5" value="DE432"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="VMSC">
+        <DESCRIPTION>Generic Velocity (3D)</DESCRIPTION>
+        <GROUP name="VMSC_Coord">
+          <PARAM name="r" datatype="double" value="0.00078" unit="km/yr"/>
+          <PARAM name="theta" datatype="double" value="3.44e-7" unit="arcmin/s"/>
+          <PARAM name="phi" datatype="double" value="8.43e-19" unit="arcmin/s"/>
+          <GROUP name="coordsys" ref="_01bx4M7ETJXWcxU"/>
+        </GROUP>
+        <GROUP name="VMSC_Error">
+          <GROUP name="VMSC_SYS_ERROR">
+            <PARAM name="low_r" datatype="double" value="0.000723" unit="km/yr">
+              <DESCRIPTION>VMSC Radial Error: lower limit</DESCRIPTION>
+            </PARAM>
+            <PARAM name="low_t" datatype="double" value="3.41e-7" unit="arcmin/s">
+              <DESCRIPTION>VMSC Theta Error: lower limit</DESCRIPTION>
+            </PARAM>
+            <PARAM name="low_p" datatype="double" value="8.21e-19" unit="arcmin/s">
+              <DESCRIPTION>VMSC Phi Error: lower limit</DESCRIPTION>
+            </PARAM>
+            <PARAM name="high_r" datatype="double" value="0.000879" unit="km/yr">
+              <DESCRIPTION>VMSC Radial Error: upper limit</DESCRIPTION>
+            </PARAM>
+            <PARAM name="high_t" datatype="double" value="3.55e-7" unit="arcmin/s">
+              <DESCRIPTION>VMSC Theta Error: upper limit</DESCRIPTION>
+            </PARAM>
+            <PARAM name="high_p" datatype="double" value="9.23e-19" unit="arcmin/s">
+              <DESCRIPTION>VMSC Phi Error: upper limit</DESCRIPTION>
+            </PARAM>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

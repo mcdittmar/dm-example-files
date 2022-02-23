@@ -1,0 +1,94 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_87gHWLH7sfP6E9L' name='DETSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:CartesianCoordSpace'>
+          <DESCRIPTION>Detector coordinate space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_8w2hAoQVEvXCh3m' name='DETX_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>detx axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8ngdZ1wCczRVicP' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='detx'/>
+                <DATATYPE ID='_882Jt08BxhtKWf8' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.5' unit='pixel'/>
+                <DATATYPE ID='_8Th2GvAGzyEzCHX' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='8192.5' unit='pixel'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8zdmwEwSHriIQsf' name='DETY_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>dety axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8H8XbgXSahAc21K' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='dety'/>
+                <DATATYPE ID='_8WA8solmzW7hMcY' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.5' unit='pixel'/>
+                <DATATYPE ID='_8XY57Wvbls6KvLy' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='8192.5' unit='pixel'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_8arlJJTCo70Q6EG' name='DETZ_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>detz axis</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_8S7aq1wzPFL97jY' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='detz'/>
+                <DATATYPE ID='_86NOlm0SANoSw1V' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='mm'/>
+                <DATATYPE ID='_8sxSkxnM4rW864Z' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='100.0' unit='mm'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01iOb8XQYR59wSB' name='DETFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <DESCRIPTION>Space frame - Detector</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_010QIWcuKgMjg5i' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='CUSTOM'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_TciOj6yno7Q8JHN' name='DET' vodml_role='meas:Position' vodml_type='meas:Position'>
+      <DESCRIPTION>Detector position</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02Bf9dmdJPruMs6' name='DET_Coord' vodml_role='meas:Position.coord' vodml_type='coords:CartesianPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_02yCGeLhaI8qv5V' name='detx' vodml_role='coords:CartesianPoint.x' vodml_type='ivoa:RealQuantity' value='3156' unit='pixel'/>
+            <DATATYPE ID='_02PzBQctS6t04Ie' name='dety' vodml_role='coords:CartesianPoint.y' vodml_type='ivoa:RealQuantity' value='4497' unit='pixel'/>
+            <DATATYPE ID='_02ViEFWCnhUhqTF' name='detz' vodml_role='coords:CartesianPoint.z' vodml_type='ivoa:RealQuantity' value='17.332' unit='mm'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_02n3Qx4A0g9bYP8' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12rlVnkBvvtMXq3' name='DET_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_13gPgnlEyrRri6V' name='DET_SysError' vodml_role='meas:Error.sysError' vodml_type='meas:Ellipsoid'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13fKRwnCDUjToiS' name='semiAxis1' vodml_role='meas:Ellipsoid.semiAxis' vodml_type='ivoa:RealQuantity' value='10.025' unit='pixel'>
+                  <DESCRIPTION>SemiAxis - detx</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13cL2nZnQvO4Tm8' name='semiAxis2' vodml_role='meas:Ellipsoid.semiAxis' vodml_type='ivoa:RealQuantity' value='8.5' unit='pixel'>
+                  <DESCRIPTION>SemiAxis - dety</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13M5YMmEEzEMdNl' name='semiAxis3' vodml_role='meas:Ellipsoid.semiAxis' vodml_type='ivoa:RealQuantity' value='0.1' unit='mm'>
+                  <DESCRIPTION>SemiAxis - detz</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13WCyJljTR2Fkre' name='posAngle1' vodml_role='meas:Ellipsoid.posAngle' vodml_type='ivoa:RealQuantity' value='0.0' unit='deg'>
+                  <DESCRIPTION>Position angle</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13XCeDE3FKWjS6O' name='posAngle2' vodml_role='meas:Ellipsoid.posAngle' vodml_type='ivoa:RealQuantity' value='17.0' unit='deg'>
+                  <DESCRIPTION>Position angle</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

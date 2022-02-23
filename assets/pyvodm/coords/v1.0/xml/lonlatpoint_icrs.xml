@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:SpaceSys ID="_01bx4M7ETJXWcxU">
+    <frame xsi:type="coords:SpaceFrame">
+      <refPosition xsi:type="coords:StdRefLocation">
+        <position>TOPOCENTER</position>
+      </refPosition>
+      <spaceRefFrame>ICRS</spaceRefFrame>
+    </frame>
+  </coords:SpaceSys>
+  <coords:LonLatPoint>
+    <coordSys IDREF="_01bx4M7ETJXWcxU"/>
+    <lon xsi:type="ivoa:RealQuantity">
+      <unit>deg</unit>
+      <value>12.976853803085</value>
+    </lon>
+    <lat xsi:type="ivoa:RealQuantity">
+      <unit>deg</unit>
+      <value>-72.958015813264</value>
+    </lat>
+  </coords:LonLatPoint>
+</coords:EXAMPLE>

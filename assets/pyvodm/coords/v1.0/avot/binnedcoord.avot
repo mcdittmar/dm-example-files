@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_9XfLKmrjxFP5Vkg2" dmtype="coords:GenericSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:GenericCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:BinnedAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_87notmE8YAWiZk8" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:BinnedAxis.length">
+                  <CONSTANT ref="_8hEBS8iViy8Wo5B" dmtype="ivoa:nonnegativeInteger"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:BinnedCoordinate">
+        <ATTRIBUTE dmrole="coords:BinnedCoordinate.cval">
+          <CONSTANT ref="_02Sb9RsMpkp0M5q" dmtype="ivoa:integer"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9XfLKmrjxFP5Vkg2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <GROUP name="PHA_Axis">
+            <PARAM ID="_87notmE8YAWiZk8" name="name" datatype="char" arraysize="3" value="pha"/>
+            <PARAM ID="_8hEBS8iViy8Wo5B" name="length" datatype="long" value="36855"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="PHA">
+        <PARAM ID="_02Sb9RsMpkp0M5q" name="cval" datatype="int" value="3572"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

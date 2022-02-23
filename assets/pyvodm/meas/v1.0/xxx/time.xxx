@@ -1,0 +1,56 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_10AukhaQ4oycPJ6' name='TimeSys' vodml_role='coords:TimeSys' vodml_type='coords:TimeSys'>
+      <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_01pUyYglbbBI8Ap' name='TimeFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:TimeFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:TimeFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01Qguhm2dTtgVAD' name='tscale' vodml_role='coords:TimeFrame.timescale' vodml_type='ivoa:string' value='TT'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_TotnUWMzJYf7b8S' name='Time' vodml_role='meas:Time' vodml_type='meas:Time'>
+      <DESCRIPTION>Event time</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_098PtGwYzPjJTiM' name='Time_Coord' vodml_role='meas:Time.coord' vodml_type='coords:TimeOffset'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_09Yl1nHBkeSSqq9' name='time' vodml_role='coords:TimeOffset.time' vodml_type='ivoa:RealQuantity' value='84245787.5272969157' unit='s'/>
+            <DATATYPE ID='_02CUuREdx3t7Yd9' name='MJDRef' vodml_role='coords:TimeOffset.time0' vodml_type='coords:MJD'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_02zZDzKxTfVie1t' name='date' vodml_role='coords:MJD.date' vodml_type='ivoa:real' value='50814.02'/>
+              </ATTRIBUTES>
+              <REFERENCES>
+                <REFERENCE ID='_02YM8pcCRxN9dhE' name='timeSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:TimeSys' target='_10AukhaQ4oycPJ6'/>
+              </REFERENCES>
+            </DATATYPE>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_09IMkUiknmKBZ5x' name='timeSys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:TimeSys' target='_10AukhaQ4oycPJ6'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12EGgi1MVQ3w1iK' name='Time_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_13bNmaHjAJu8kAe' name='Time_SYS_ERROR' vodml_role='meas:Error.sysError' vodml_type='meas:Symmetrical'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_130Je9HtvhW6XY3' name='radius' vodml_role='meas:Symmetrical.radius' vodml_type='ivoa:RealQuantity' value='3.241040' unit='s'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

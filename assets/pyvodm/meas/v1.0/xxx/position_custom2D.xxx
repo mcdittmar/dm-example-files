@@ -1,0 +1,83 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_08Cg2XN38Dysnaa' name='CoordSpace' vodml_role='coords:PhysicalCoordSys.coordSpace' vodml_type='coords:GenericCoordSpace'>
+          <DESCRIPTION>Custom Coordinate Space</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_08LLWioG91HKgP6' name='PLANE_Theta_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>PLANE Off-Axis angle</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_08zQPxNtK58IbJ0' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='theta'/>
+                <DATATYPE ID='_08LsgToDwaEcW3j' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='arcmin'/>
+                <DATATYPE ID='_08cAwUtJAr9euH3' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='30.0' unit='arcmin'/>
+                <PRIMITIVE ID='_08oGse9qs1NcOF7' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='FALSE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+            <OBJECT ID='_08vsEsqIu8UEnaA' name='PLANE_Phi_Axis' vodml_role='coords:CoordSpace.axis' vodml_type='coords:ContinuousAxis'>
+              <DESCRIPTION>PLANE Azimuth angle</DESCRIPTION>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_08JMbIER2Sc11Dx' name='name' vodml_role='coords:Axis.name' vodml_type='ivoa:string' value='phi'/>
+                <DATATYPE ID='_08Nb7Wx9E5D8C1b' name='tlmin' vodml_role='coords:ContinuousAxis.domainMin' vodml_type='ivoa:RealQuantity' value='0.0' unit='deg'/>
+                <DATATYPE ID='_08N2EztjEeO6WOK' name='tlmax' vodml_role='coords:ContinuousAxis.domainMax' vodml_type='ivoa:RealQuantity' value='360.0' unit='deg'/>
+                <PRIMITIVE ID='_08WIxMHl74GA0nM' name='cyclic' vodml_role='coords:ContinuousAxis.cyclic' vodml_type='ivoa:boolean' value='TRUE'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01xh2to9uVT2sLb' name='SpaceFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='CUSTOM'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_11nIhrfPXMzKINZ' name='PLANE' vodml_role='meas:Position' vodml_type='meas:Position'>
+      <DESCRIPTION>Position (2D)</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_05C1z57v59LWH9O' name='PLANE_Coord' vodml_role='meas:Position.coord' vodml_type='coords:GenericPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_05CwCWnTStM6RYM' name='theta' vodml_role='coords:GenericPoint.axis1' vodml_type='ivoa:RealQuantity' value='0.3808320' unit='deg'/>
+            <DATATYPE ID='_05fEtRJa62DE2Zr' name='phi' vodml_role='coords:GenericPoint.axis2' vodml_type='ivoa:RealQuantity' value='250.356132' unit='deg'/>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_05z0rQwtkwNuQ5j' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12B2v5BbMNRXlLV' name='PLANE_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_1321R6CwnGQXhZ3' name='PLANE_SYS_ERROR' vodml_role='meas:Error.sysError' vodml_type='meas:Asymmetrical2D'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13RDZj2nDjlobcV' name='plus_t' vodml_role='meas:Asymmetrical2D.plus' vodml_type='ivoa:RealQuantity' value='0.023' unit='arcmin'>
+                  <DESCRIPTION>PLANE Theta Error: positive axis direction</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13ahMzpMe1KcZKT' name='plus_p' vodml_role='meas:Asymmetrical2D.plus' vodml_type='ivoa:RealQuantity' value='0.001388' unit='deg'>
+                  <DESCRIPTION>PLANE Phi Error: positive axis direction</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_132XXYZ17KiXfXe' name='minus_t' vodml_role='meas:Asymmetrical2D.minus' vodml_type='ivoa:RealQuantity' value='0.025' unit='arcmin'>
+                  <DESCRIPTION>PLANE Theta Error: negative axis direction</DESCRIPTION>
+                </DATATYPE>
+                <DATATYPE ID='_13hcjhmqgTW7gjE' name='minus_p' vodml_role='meas:Asymmetrical2D.minus' vodml_type='ivoa:RealQuantity' value='0.001944' unit='deg'>
+                  <DESCRIPTION>PLANE Phi Error: negative axis direction</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

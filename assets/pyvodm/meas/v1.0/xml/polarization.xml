@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<meas:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:meas="http://ivoa.net/xml/meas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:GenericSys ID="_9XfLKmrjxFP5Vkg">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:DiscreteSetAxis">
+        <name>polarization</name>
+      </axis>
+    </coordSpace>
+  </coords:GenericSys>
+  <meas:Polarization>
+    <coord xsi:type="coords:PolState">
+      <coordSys IDREF="_9XfLKmrjxFP5Vkg"/>
+      <cval>Q</cval>
+    </coord>
+  </meas:Polarization>
+</meas:EXAMPLE>

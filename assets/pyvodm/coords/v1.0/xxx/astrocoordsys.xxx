@@ -1,0 +1,73 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_9urlE9Q1HydkuZr' name='AstroCoordSys' vodml_role='coords:AstroCoordSystem' vodml_type='coords:AstroCoordSystem'>
+      <COMPOSITIONS>
+        <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:AstroCoordSystem.coordSys' vodml_type='coords:SpaceSys'>
+          <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_01xh2to9uVT2sLb' name='ICRSFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+                  <ATTRIBUTES>
+                    <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+                  </ATTRIBUTES>
+                </DATATYPE>
+                <PRIMITIVE ID='_01R8vaNX69SXh0K' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='ICRS'/>
+                <PRIMITIVE ID='_01VsC2pLXrd9Ekn' name='ephemeris' vodml_role='coords:SpaceFrame.planetaryEphem' vodml_type='ivoa:string' value='DE432'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01AukhaQ4oycPJ6' name='TimeSys' vodml_role='coords:AstroCoordSystem.coordSys' vodml_type='coords:TimeSys'>
+          <DESCRIPTION>Time domain coordinate system</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_01pUyYglbbBI8Ap' name='TimeFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:TimeFrame'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_01matg4BqYwGo1T' name='TRefPosition' vodml_role='coords:TimeFrame.refPosition' vodml_type='coords:StdRefLocation'>
+                  <ATTRIBUTES>
+                    <PRIMITIVE ID='_01AKiqTYFjVfg5T' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+                  </ATTRIBUTES>
+                </DATATYPE>
+                <PRIMITIVE ID='_01Qguhm2dTtgVAD' name='tscale' vodml_role='coords:TimeFrame.timescale' vodml_type='ivoa:string' value='TT'/>
+                <DATATYPE ID='_01C7gsAiOc2GGNL' name='RefDirection' vodml_role='coords:TimeFrame.refDirection' vodml_type='coords:CustomRefLocation'>
+                  <ATTRIBUTES>
+                    <PRIMITIVE ID='_01ucHJB8rR26UNO' name='epoch' vodml_role='coords:CustomRefLocation.epoch' vodml_type='coords:Epoch' value='J2014.25'/>
+                    <DATATYPE ID='_02urpyBLD2ije9O' name='RefDirPos' vodml_role='coords:CustomRefLocation.position' vodml_type='coords:LonLatPoint'>
+                      <ATTRIBUTES>
+                        <DATATYPE ID='_02jMwRC4FqXDQ2x' name='ra' vodml_role='coords:LonLatPoint.lon' vodml_type='ivoa:RealQuantity' value='6.752477' unit='deg'/>
+                        <DATATYPE ID='_02RsirE4EJg0rPn' name='dec' vodml_role='coords:LonLatPoint.lat' vodml_type='ivoa:RealQuantity' value='-16.716116' unit='deg'/>
+                        <DATATYPE ID='_02n9hAcpNuKugma' name='dist' vodml_role='coords:LonLatPoint.dist' vodml_type='ivoa:RealQuantity' value='8.6' unit='ly'/>
+                      </ATTRIBUTES>
+                      <REFERENCES>
+                        <REFERENCE ID='_02C7gsAiOc2GGNL' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+                      </REFERENCES>
+                    </DATATYPE>
+                  </ATTRIBUTES>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+        <OBJECT ID='_01fLKmrjxFP5Vkg' name='SpecSys' vodml_role='coords:AstroCoordSystem.coordSys' vodml_type='coords:GenericSys'>
+          <DESCRIPTION>Spectral domain coordinate system</DESCRIPTION>
+          <COMPOSITIONS>
+            <OBJECT ID='_01RsirE4EJg0rPn' name='SpectralFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:GenericFrame'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_01matg4BqYwGo1S' name='SRefPosition' vodml_role='coords:GenericFrame.refPosition' vodml_type='coords:StdRefLocation'>
+                  <ATTRIBUTES>
+                    <PRIMITIVE ID='_01AKiqTYFjVfg5S' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+                  </ATTRIBUTES>
+                </DATATYPE>
+                <PRIMITIVE ID='_01xMAdev6QNiYuM' name='ephemeris' vodml_role='coords:GenericFrame.planetaryEphem' vodml_type='ivoa:string' value='DE432'/>
+              </ATTRIBUTES>
+            </OBJECT>
+          </COMPOSITIONS>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

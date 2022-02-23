@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coords:EXAMPLE xmlns:coords="http://ivoa.net/xml/coords" xmlns:ivoa="http://ivoa.net/dm/models/vo-dml/xsd/ivoa" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <coords:GenericSys ID="_9XfLKmrjxFP5Vkg">
+    <coordSpace xsi:type="coords:GenericCoordSpace">
+      <axis xsi:type="coords:ContinuousAxis">
+        <name>energy</name>
+        <domainMin xsi:type="ivoa:RealQuantity">
+          <unit>eV</unit>
+          <value>0.0</value>
+        </domainMin>
+        <domainMax xsi:type="ivoa:RealQuantity">
+          <unit>eV</unit>
+          <value>1000000.0</value>
+        </domainMax>
+        <cyclic>false</cyclic>
+      </axis>
+    </coordSpace>
+  </coords:GenericSys>
+  <coords:PhysicalCoordinate>
+    <coordSys IDREF="_9XfLKmrjxFP5Vkg"/>
+    <cval xsi:type="ivoa:RealQuantity">
+      <unit>eV</unit>
+      <value>13950.9433593750</value>
+    </cval>
+  </coords:PhysicalCoordinate>
+</coords:EXAMPLE>

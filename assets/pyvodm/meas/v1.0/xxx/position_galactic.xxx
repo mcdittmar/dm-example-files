@@ -1,0 +1,56 @@
+<DOCUMENT>
+  <INFO  value='IVAO Datamodel Instance document'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
+  <METADATA name='Default'>
+    <OBJECT ID='_01bx4M7ETJXWcxU' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
+      <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+      <COMPOSITIONS>
+        <OBJECT ID='_01RdYhp4K08J45o' name='GalacticFrame' vodml_role='coords:PhysicalCoordSys.frame' vodml_type='coords:SpaceFrame'>
+          <DESCRIPTION>Galactic Space frame</DESCRIPTION>
+          <ATTRIBUTES>
+            <DATATYPE ID='_01matg4BqYwGo1L' name='RefPosition' vodml_role='coords:SpaceFrame.refPosition' vodml_type='coords:StdRefLocation'>
+              <ATTRIBUTES>
+                <PRIMITIVE ID='_01AKiqTYFjVfg5H' name='pos' vodml_role='coords:StdRefLocation.position' vodml_type='ivoa:string' value='TOPOCENTER'/>
+              </ATTRIBUTES>
+            </DATATYPE>
+            <PRIMITIVE ID='_014lMNb5GXfdTKo' name='refFrame' vodml_role='coords:SpaceFrame.spaceRefFrame' vodml_type='ivoa:string' value='GALACTIC'/>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+    <OBJECT ID='_GiU4FF6AxzqK5eN' name='GALPOS' vodml_role='meas:Position' vodml_type='meas:Position'>
+      <DESCRIPTION>Galactic position</DESCRIPTION>
+      <ATTRIBUTES>
+        <DATATYPE ID='_02zKZQ9xvY7DefY' name='GALPOS_Coord' vodml_role='meas:Position.coord' vodml_type='coords:LonLatPoint'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_02D6ju4aiPflo9b' name='l' vodml_role='coords:LonLatPoint.lon' vodml_type='ivoa:RealQuantity' value='303.71570166' unit='deg'>
+              <DESCRIPTION>Galactic Longitude</DESCRIPTION>
+            </DATATYPE>
+            <DATATYPE ID='_02BiSwHC6BRxoHu' name='b' vodml_role='coords:LonLatPoint.lat' vodml_type='ivoa:RealQuantity' value='-10.3713407' unit='deg'>
+              <DESCRIPTION>Galactic Latitude</DESCRIPTION>
+            </DATATYPE>
+          </ATTRIBUTES>
+          <REFERENCES>
+            <REFERENCE ID='_02shPJm5Hn48cnv' name='coordsys' vodml_role='coords:Coordinate.coordSys' vodml_type='coords:SpaceSys' target='_01bx4M7ETJXWcxU'/>
+          </REFERENCES>
+        </DATATYPE>
+      </ATTRIBUTES>
+      <COMPOSITIONS>
+        <OBJECT ID='_12whHpLerF9sUXb' name='GALPOS_Error' vodml_role='meas:Measure.error' vodml_type='meas:Error'>
+          <ATTRIBUTES>
+            <DATATYPE ID='_13YYAtMbFB2kYa4' name='GALPOS_SYS_ERROR' vodml_role='meas:Error.sysError' vodml_type='meas:Symmetrical'>
+              <ATTRIBUTES>
+                <DATATYPE ID='_13n1dIZxDyHUFBQ' name='radius' vodml_role='meas:Symmetrical.radius' vodml_type='ivoa:RealQuantity' value='2.7400E-04' unit='deg'>
+                  <DESCRIPTION>Position error - radius</DESCRIPTION>
+                </DATATYPE>
+              </ATTRIBUTES>
+            </DATATYPE>
+          </ATTRIBUTES>
+        </OBJECT>
+      </COMPOSITIONS>
+    </OBJECT>
+  </METADATA>
+</DOCUMENT>
+

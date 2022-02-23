@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.4_vodml">
+  <VODML>
+    <MODEL>
+      <NAME>coords</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
+    </MODEL>
+    <MODEL>
+      <NAME>ivoa</NAME>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
+    </MODEL>
+    <GLOBALS>
+      <INSTANCE ID="_9XfLKmrjxFP5Vkg2" dmtype="coords:GenericSys">
+        <COMPOSITION dmrole="coords:PhysicalCoordSys.coordSpace"> 
+          <INSTANCE dmtype="coords:GenericCoordSpace">
+            <COMPOSITION dmrole="coords:CoordSpace.axis"> 
+              <INSTANCE dmtype="coords:ContinuousAxis">
+                <ATTRIBUTE dmrole="coords:Axis.name">
+                  <CONSTANT ref="_8VYHlttHlgLac2P" dmtype="ivoa:string"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMin">
+                  <CONSTANT ref="_8ppsLcy0kowlG0W" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.domainMax">
+                  <CONSTANT ref="_8sCii8emDILKX1s" dmtype="ivoa:RealQuantity"/>
+                </ATTRIBUTE>
+                <ATTRIBUTE dmrole="coords:ContinuousAxis.cyclic">
+                  <CONSTANT ref="_8jrMPy7pV4G5xHZ" dmtype="ivoa:boolean"/>
+                </ATTRIBUTE>
+              </INSTANCE>
+            </COMPOSITION> 
+          </INSTANCE>
+        </COMPOSITION> 
+      </INSTANCE>
+      <INSTANCE dmtype="coords:PhysicalCoordinate">
+        <ATTRIBUTE dmrole="coords:PhysicalCoordinate.cval">
+          <CONSTANT ref="_02aOjYeul6zHKxB" dmtype="ivoa:RealQuantity"/>
+        </ATTRIBUTE>
+        <REFERENCE dmrole="coords:Coordinate.coordSys">
+          <IDREF>_9XfLKmrjxFP5Vkg2</IDREF>
+        </REFERENCE>
+      </INSTANCE>
+    </GLOBALS>
+  </VODML>
+  <RESOURCE>
+    <TABLE ID="_table1">
+      <DESCRIPTION>With VO-DML annotation enabled, the TABLE content may retain its "native" structure or be reduced to just the PARAM and FIELD elements."</DESCRIPTION>
+      <GROUP ID="_9XfLKmrjxFP5Vkg" name="GenericSys">
+        <DESCRIPTION>Generic 1D Coordinate system</DESCRIPTION>
+        <GROUP name="CoordSpace">
+          <GROUP name="Energy_Axis">
+            <PARAM ID="_8VYHlttHlgLac2P" name="name" datatype="char" arraysize="6" value="energy"/>
+            <PARAM ID="_8ppsLcy0kowlG0W" name="tlmin" datatype="double" value="0.0" unit="eV"/>
+            <PARAM ID="_8sCii8emDILKX1s" name="tlmax" datatype="double" value="1000000.0" unit="eV"/>
+            <PARAM ID="_8jrMPy7pV4G5xHZ" name="cyclic" datatype="boolean" value="FALSE"/>
+          </GROUP>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Energy">
+        <PARAM ID="_02aOjYeul6zHKxB" name="cval" datatype="double" value="13950.9433593750" unit="eV"/>
+        <GROUP name="coordsys" ref="_9XfLKmrjxFP5Vkg"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>

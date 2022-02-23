@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VOTABLE xmlns="http://www.ivoa.net/xml/VOTable/v1.3">
+  <RESOURCE>
+    <TABLE>
+      <GROUP ID="_01bx4M7ETJXWcxU" name="SpaceSys">
+        <DESCRIPTION>Space domain coordinate system</DESCRIPTION>
+        <GROUP name="FK4Frame">
+          <DESCRIPTION>Space frame metadata</DESCRIPTION>
+          <GROUP name="RefPosition">
+            <PARAM name="pos" datatype="char" arraysize="10" value="TOPOCENTER"/>
+          </GROUP>
+          <PARAM name="refFrame" datatype="char" arraysize="3" value="FK4"/>
+          <PARAM name="equinox" datatype="char" arraysize="5" value="B1950"/>
+        </GROUP>
+      </GROUP>
+      <GROUP name="Point">
+        <PARAM name="ra" datatype="double" value="12.976853803085" unit="deg"/>
+        <PARAM name="dec" datatype="double" value="-72.958015813264" unit="deg"/>
+        <GROUP name="spacesys" ref="_01bx4M7ETJXWcxU"/>
+      </GROUP>
+    </TABLE>
+  </RESOURCE>
+</VOTABLE>
