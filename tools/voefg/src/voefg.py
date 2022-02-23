@@ -15,20 +15,6 @@ verbose = 0
 toolname = 'voefg'
 version = '1.0'
 
-tool_paritems = ( "infile",
-                  "template",
-                  "outdir",
-                  "outfile",
-                  "format",
-                  "cube",
-                  "ds",
-                  "coords",
-                  "meas",
-                  "trans",
-                  "ivoa",
-                  "clobber",
-                  "verbose")
-
 def main():
   """
   Utility tool to generate annotated serializations of data files,
@@ -205,15 +191,10 @@ def load_params( tool, argv=None ):
 
   # Get tool parameters
   try:
-    pars = get_params( tool, argv )
+    pars = _init_params()
+    set_params( pars, argv )
   except Exception as e:
     raise(e)
-
-  # validate parameter set
-  keylist = list(pars.keys())
-  for item in tool_paritems:
-    if item not in keylist:
-      raise IOError("missing expected parameter, '{0}'".format(item))
 
   # validate certain parameter values
   try:
@@ -383,6 +364,54 @@ def _check_clobber( fname, clobber=True ):
         os.unlink( fname )
       except OSError as oe:
         raise IOError("Could not clobber file '{0}'.".format( fname ) )
+
+
+
+# ================================================================================
+def _init_params():
+  """
+  Initialize dictionary with tool parameter set.
+
+   Parameters
+   ----------
+   none
+   
+   
+   Returns
+   --------
+
+   params : dictionary
+       python dictionary of the parameter key-value pairs 
+   
+
+  Raises
+  --------
+  none
+
+  """
+  
+  # parameter dictionary 
+  params = OrderedDict()
+
+  params['infile'] = ""
+  params['template'] = ""
+  params['outdir'] = ""
+  params['outfile'] = ""
+  params['format'] = "vot"
+  params['clobber'] = True
+  params['verbose'] = 1
+
+  # Model Specs (current)
+  #  o these need to migrate into the templates
+  params['ds']     = "file:///Users/sao/Documents/IVOA/GitHub/models/vodml/DatasetMetadata-1.0.vo-dml.xml"
+  params['cube']   = "file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Cube-1.0.vo-dml.xml"
+  params['coords'] = "file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml"
+  params['meas']   = "file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml"
+  params['trans']  = "file:///Users/sao/Documents/IVOA/GitHub/TransformDM/vo-dml/Trans-v1.0.vo-dml.xml"
+  params['ivoa']   = "file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml"
+
+  return params
+
 
 # ================================================================================
 # Invoke program

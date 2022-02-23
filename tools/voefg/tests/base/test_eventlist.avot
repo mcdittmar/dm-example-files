@@ -3,15 +3,15 @@
   <VODML>
     <MODEL>
       <NAME>coords</NAME>
-      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Coords-v1.0.20210924.vo-dml.xml</URL>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml</URL>
     </MODEL>
     <MODEL>
       <NAME>ivoa</NAME>
-      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/IVOA-v1.vo-dml.xml</URL>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml</URL>
     </MODEL>
     <MODEL>
       <NAME>meas</NAME>
-      <URL>file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Meas-v1.0.20211019.vo-dml.xml</URL>
+      <URL>file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml</URL>
     </MODEL>
     <GLOBALS>
       <INSTANCE ID="_01dasjgawtgfvis2" dmtype="coords:SpaceSys">

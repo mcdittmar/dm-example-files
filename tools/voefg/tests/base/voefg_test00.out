@@ -1,8 +1,8 @@
 <DOCUMENT>
   <INFO  value='IVAO Datamodel Instance document'/>
-  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Coords-v1.0.20210924.vo-dml.xml'/>
-  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/IVOA-v1.vo-dml.xml'/>
-  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/dm-usecases-impl/resources/Meas-v1.0.20211019.vo-dml.xml'/>
+  <MODEL prefix='coords' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Coords-v1.0.20210924.vo-dml.xml'/>
+  <MODEL prefix='ivoa' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/IVOA-v1.vo-dml.xml'/>
+  <MODEL prefix='meas' url='file:///Users/sao/Documents/IVOA/GitHub/models/vodml/Meas-v1.0.20211019.vo-dml.xml'/>
   <METADATA name='Default'>
     <OBJECT ID='_01dasjgawtgfvis' name='SpaceSys' vodml_role='coords:SpaceSys' vodml_type='coords:SpaceSys'>
       <COMPOSITIONS>
